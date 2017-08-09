@@ -42,3 +42,9 @@ $color: #ccc
 　　
 　　sass --watch app/sass:public/stylesheets
 ```
+
+**运算符两边要有空格**
+
+## @mixin fn($arguments)定义函数
+引入函数
+@include fn(1)

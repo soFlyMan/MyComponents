@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './tools/sass/tools.scss'
 
 export default class NativeVersion extends Component {
   render() {

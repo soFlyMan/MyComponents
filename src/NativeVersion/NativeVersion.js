@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
-import './tools/sass/tools.scss'
+// import '../sass/toolbar/toolbar.scss'
 
 export default class NativeVersion extends Component {
   render() {
     return (
       <div>
         <h2>Native Version Components</h2>
-        <a href="./src/NativeVersion/tools/tools.html">tools</a>
+        <ul>
+        <li><a href="./src/NativeVersion/toolbar/toolbar.html">tools</a></li>
+        <li><a href="./src/NativeVersion/AnchorLink/AnchorLink.html">AnchorLink</a></li>
+        </ul>
       </div>
     )
   }

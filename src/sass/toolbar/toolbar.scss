@@ -1,5 +1,9 @@
+@import "mixin";
+// 背景图片方式
+// HTML结构简单
+// 兼容性良好，可以兼容到IE6
+// 使用大量图片，对性能有一定影响，而且不利于修改
 $toolbar-size: 52px;
-
 @mixin tool-item($pos, $hoverPos) {
   background-position: 0 $pos;
 
@@ -8,14 +12,6 @@ $toolbar-size: 52px;
   }
 }
 
-//兼容函数封装
-@mixin transition($transition) {
-  -webkit-transition: $transition;
-  -moz-transition: $transition;
-  -ms-transition: $transition;
-  -o-transition: $transition;
-  transition: $transition;
-}
 .toolbar-item, .toolbar-layer {
   background-image: url(../../img/toolbar/toolbar.png);
   background-repeat: no-repeat;
@@ -39,9 +35,11 @@ $toolbar-size: 52px;
 
   &:hover {
     .toolbar-layer {
-      opacity: 1;
-      filter: alpha(opacity=100);
-      transform: scale(1);
+      // opacity: 1;
+      // filter: alpha(opacity=100);
+      @include opacity(1);
+      // transform: scale(1);
+      @include transform_scale(1);
     }
   }
 }
@@ -94,12 +92,15 @@ $toolbar-size: 52px;
   width: 172px;
   // background-image: url(../../img/toolbar/toolbar.png);
   // background-repeat: no-repeat;
-  opacity: 0;
-  // 兼容IE
-  filter: alpha(opacity=0);
+  // opacity: 0;
+  // // 兼容IE
+  // filter: alpha(opacity=0);
+  @include opacity(0);
   //变换基准点
-  transform-origin: 95% 95%;
-  transform: scale(0.01);
+  // transform-origin: 95% 95%;
+  @include transform_origin(95% 95%);
+  // transform: scale(0.01);
+  @include transform_scale(0.01);
   //过渡
   // transition: all 1s;
   @include transition(all 1s);

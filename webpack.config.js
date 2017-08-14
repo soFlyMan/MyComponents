@@ -6,7 +6,7 @@ module.exports = {
     app: './app.js',
   },
   output: {
-    path: __dirname + '/dist',
+    path: __dirname + '/dist/',
     filename: '[name].bundle.js',
     publicPath: "http://localhost:8080/assets",
   },
@@ -24,15 +24,34 @@ module.exports = {
         }]
       },
       {
-        test: /\.css/,
+        test: /\.css$/,
         use: ['style-loader', 'css-loader']
       },
       {
-        test: /\.(scss|sass)/,
+        test: /\.(scss|sass)$/,
         use: [
           'style-loader',
           'css-loader',
+          'resolve-url-loader',
           'sass-loader'
+        ]
+      },
+      // {
+      //   test: /\.(jpe?g|png|gif|svg)$/i,
+      //   use: [
+      //     'url-loader?limit=10000',
+      //     'img-loader'
+      //   ]
+      // },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: ['file-loader','url-loader'
+          // {
+          //   loader: 'url-loader',
+          //   options: {
+          //     limit: 8192
+          //   }
+          // }
         ]
       },
     ]

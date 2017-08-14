@@ -1,0 +1,140 @@
+//过渡
+// @import "/src/sass/_mixin.scss"
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+//透明度
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  filter: alpha(opacity=$opacity*100)
+}
+
+// 变换 缩放
+@mixin transform_scale($scale) {
+  -webkit-transform: scale($scale);
+  -moz-transform: scale($scale);
+  -ms-transform: scale($scale);
+  -o-transform: scale($scale);
+  transform: scale($scale);
+}
+
+//变换原点
+@mixin transform_origin($origin) {
+  -webkit-transform-origin: $origin;
+  -moz-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  -o-transform-origin: $origin;
+  transform-origin: $origin;
+}
+
+// 背景图片方式
+// HTML结构简单
+// 兼容性良好，可以兼容到IE6
+// 使用大量图片，对性能有一定影响，而且不利于修改
+$toolbar-size: 52px;
+@mixin tool-item($pos, $hoverPos) {
+  background-position: 0 $pos;
+
+  &:hover {
+    background-position: 0 $hoverPos;
+  }
+}
+
+.toolbar-item, .toolbar-layer {
+  background-image: url(/src/img/toolbar/toolbar.png);
+  background-repeat: no-repeat;
+}
+.toolbar {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  margin-left: -$toolbar-size / 2;
+}
+.toolbar-item {
+  position: relative;
+  display: block;
+  width: $toolbar-size;
+  height: $toolbar-size;
+  // background-image: url(../../img/toolbar/toolbar.png);
+  // background-repeat: no-repeat;
+  margin-top: 1px;
+  // transition: background-position 1s;
+  @include transition(background-position 1s);
+
+  &:hover {
+    .toolbar-layer {
+      // opacity: 1;
+      // filter: alpha(opacity=100);
+      @include opacity(1);
+      // transform: scale(1);
+      @include transform_scale(1);
+    }
+  }
+}
+.toolbar-item-weixin {
+  // background-position: 0 -798px;
+  //
+  // &:hover {
+  //   background-position: 0 -860px;
+  // }
+
+  @include tool-item(-798px,-860px);
+
+  .toolbar-layer {
+    height: 212px;
+    background-position: 0 0;
+  }
+}
+.toolbar-item-feedback {
+  // background-position: 0 -426px;
+  //
+  // &:hover {
+  //   background-position: 0 -488px;
+  // }
+  @include tool-item(-426px,-488px);
+}
+.toolbar-item-app {
+  // background-position: 0 -550px;
+  //
+  // &:hover {
+  //   background-position: 0 -612px;
+  // }
+  @include tool-item(-550px,-612px);
+  .toolbar-layer {
+    height: 194px;
+    background-position: 0 -222px;
+  }
+}
+.toolbar-item-top {
+  // background-position: 0 -674px;
+  //
+  // &:hover {
+  //   background-position: 0 -736px;
+  // }
+  @include tool-item(-674px,-736px);
+}
+.toolbar-layer {
+  position: absolute;
+  right: $toolbar-size - 6;
+  bottom: -10px;
+  width: 172px;
+  // background-image: url(../../img/toolbar/toolbar.png);
+  // background-repeat: no-repeat;
+  // opacity: 0;
+  // // 兼容IE
+  // filter: alpha(opacity=0);
+  @include opacity(0);
+  //变换基准点
+  // transform-origin: 95% 95%;
+  @include transform_origin(95% 95%);
+  // transform: scale(0.01);
+  @include transform_scale(0.01);
+  //过渡
+  // transition: all 1s;
+  @include transition(all 1s);
+}

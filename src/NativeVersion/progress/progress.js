@@ -1,11 +1,11 @@
-function log() {
-  console.log.apply(console,arguments)
-}
+// function log() {
+//   console.log.apply(console,arguments)
+// }
+var log = console.log.bind(console)
 
 function random(min, max) {
   return Math.floor(Math.random()*(max - min + 1) + min)
 }
-
 var a = 1
 document.onreadystatechange = function() {
   var loading = document.getElementById('loading')
@@ -15,17 +15,15 @@ document.onreadystatechange = function() {
 
   if(document.readyState!='complete') {
     line.className+= " " + "loading-interactive"
-
   function onprogress() {
     var timeout = random(1,5)
-    var timer = setTimeout(function() {
-      if(num.innerHTML>=100) {
-        num.innerHTML= '99'
+    var timer = window.setTimeout(function() {
+      if(num.innerHTML>=99) {
         clearTimeout(timer)
-        return
+      }else{
+        num.innerHTML = a++
+        onprogress()
       }
-      num.innerHTML = a++
-      onprogress()
     },timeout)
   }
   onprogress()
@@ -36,6 +34,7 @@ document.onreadystatechange = function() {
     num.innerHTML= '100'
     setTimeout(function() {
       document.getElementById('loading-num').style.display = 'none'
-    },100)
+      line.style.display = 'none'
+    },300)
   }
 }

@@ -1,0 +1,52 @@
+@import "mixin";
+
+$imgWidth: 600px;
+$imgHeight: 300px;
+
+$switchWidth: 40px;
+$switchHeight: 80px;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.carousel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: $imgWidth - 20;
+  height: $imgHeight;
+  overflow: hidden;
+
+  #list {
+    position: absolute;
+    left: 0px;
+    // display: inline-block;
+    width: $imgWidth * 5;
+    height: $imgHeight;
+
+      img {
+        float: left;
+        width: $imgWidth;
+        height: $imgHeight;
+        margin-right: -4px;
+      }
+  }
+}
+
+.switch {
+  position: absolute;
+  top: $imgHeight / 2 - $switchHeight / 2;
+  width: $switchWidth;
+  height: $switchHeight;
+  background-color: #000;
+  @include opacity(0.5);
+  z-index: 1000;
+}
+.next {
+  left: $imgWidth - $switchWidth - 20;
+}

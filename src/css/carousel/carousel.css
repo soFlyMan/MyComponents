@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.carousel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 580px;
+  height: 300px;
+  overflow: hidden; }
+  .carousel #list {
+    position: absolute;
+    left: 0px;
+    width: 3000px;
+    height: 300px; }
+    .carousel #list img {
+      float: left;
+      width: 600px;
+      height: 300px;
+      margin-right: -4px; }
+
+.switch {
+  position: absolute;
+  top: 110px;
+  width: 40px;
+  height: 80px;
+  background-color: #000;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  z-index: 1000; }
+
+.next {
+  left: 540px; }
+
+/*# sourceMappingURL=carousel.css.map */

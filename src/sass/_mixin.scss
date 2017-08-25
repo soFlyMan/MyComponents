@@ -10,7 +10,7 @@
 //透明度
 @mixin opacity($opacity) {
   opacity: $opacity;
-  filter: alpha(opacity=$opacity*100)
+  filter: alpha(opacity=$opacity * 100)
 }
 
 // 变换 缩放

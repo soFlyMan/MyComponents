@@ -75,8 +75,7 @@ var Carousel = function() {
   var o = {
     left: 0,
     moveToLeft: -600,
-    height: 300,
-    clickFlag: true
+    clickFlag: true,
   }
   // o.direction = 'left'
   var id = o.id = document.getElementById('list')
@@ -87,16 +86,16 @@ var Carousel = function() {
   o.play = function() {
     o.left += o.moveToLeft
 
-
+    //seamless switch
     if(o.left > 0) {
       o.id.style.left = -2400 + 'px'
       o.left = -1800
     }
-
     if(o.left < -2400) {
       id.style.left = 0 + 'px'
       o.left = -600
     }
+
     animate(id, { left: o.left }, function() {
       log('123')
       o.clickFlag = true
@@ -137,7 +136,7 @@ var Carousel = function() {
 
     o.clickFlag = false
   }
-  
+
   return o
 }
 

@@ -1,0 +1,135 @@
+$avater: 120px;
+
+@keyframes typing {
+  from {
+    width: 0;
+
+  }
+}
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+.home-container {
+  width: 100%;
+  height: 100%;
+
+  .home-page1 {
+    width: 100%;
+    height: 100%;
+    background-color: #FCFEFF;
+
+    .home-nav {
+      width: 100%;
+      height: 80%;
+      position: relative;
+      background: linear-gradient(to bottom, #93E2FF, #F5BEF6);
+      background: url(./timg.png);
+      background-size: 100% 120%;
+      // opacity: .6;
+
+      .home-layer {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, #93E2FF, #F5BEF6);
+        opacity: 0.4;
+
+
+      }
+
+      .home-tag {
+        position: absolute;
+        top: 20%;
+        left: 16%;
+      }
+
+      .home-avater {
+        position: absolute;
+        width: $avater;
+        height: $avater;
+        // background: #F00;
+        padding-right: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: - $avater / 2;
+        border-radius: 50%;
+        overflow: hidden;
+        z-index: 2;
+
+        img {
+          width: $avater;
+          height: $avater;
+          border-radius: 50%;
+          opacity: 1;
+        }
+      }
+    }
+
+$desc-words: 400px;
+
+    .home-desc {
+      // position: relative;
+      display:-webkit-flex;
+      display:flex;
+      width: 100%;
+      height: 20%;
+      // text-align: center;
+      justify-content: center;
+
+      .words {
+        width: 572px;
+        height: 26px;
+        position: relative;
+        top: 50%;
+        left: 0;
+        // right: 0;
+        // margin: 0 auto;
+        h1 {
+          position: relative;
+          width: 48ch;
+          height: 24px;
+          // margin: 0 auto;
+          // margin-right: 24ch;
+          // display: block;
+          padding-left: 1px;
+          background: #FFF;
+          text-align: left;
+          line-height: 24px;
+          font-size: 24px;
+          color: #5CCEF9;
+          overflow: hidden;
+          white-space: nowrap;
+          border-right: .05em solid #5CCEF9;
+          animation: typing 6s steps(48),
+          caret 1s infinite steps(1);
+
+          span {
+            // display: inline-block;
+            position: absolute;
+            right: 0px;
+            width: .5ch;
+            background: #FFF;
+            height: 24px;
+          }
+        }
+      }
+
+    }
+  }
+  .home-page2 {
+    width: 100%;
+    height: 100%;
+    background: #FCFEEF;
+  }
+
+  .home-page3 {
+    width: 100%;
+    height: 100%;
+    background: #FCFFFF;
+  }
+}

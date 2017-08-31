@@ -1,0 +1,22 @@
+$red: 255;
+$alpha: .2;
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+.hometag {
+  padding: 12px;
+  text-align: center;
+  // transition: all .4s;
+  @include transition(all .4s);
+
+  &:hover {
+    background: rgba($red, $red, $red, $alpha);
+    border-radius: 6px;
+  }
+}

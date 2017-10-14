@@ -2,11 +2,10 @@ var router = require('koa-router')();
 
 router.get('/', async function (ctx, next) {
   ctx.state = {
-    title: 'koa2 title'
+    title: 'soFy'
   };
 
-  await ctx.render('index', {
-  });
+  await ctx.render('index');
 })
 
 router.get('/foo', async function (ctx, next) {

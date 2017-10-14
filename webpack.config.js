@@ -6,9 +6,9 @@ module.exports = {
     app: './app.js',
   },
   output: {
-    path: __dirname + '/dist/',
+    path: __dirname + '/server/dist',
     filename: '[name].bundle.js',
-    publicPath: "http://localhost:8080/assets",
+    publicPath: "http://localhost:3000/",
   },
   devServer: {
     contentBase: __dirname

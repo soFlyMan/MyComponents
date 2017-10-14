@@ -1,0 +1,13 @@
+.RV-tag {
+  display: inline-block;
+  border-radius: 12px;
+  padding: 4px 12px;
+  margin-right: 12px;
+  cursor: pointer;
+  background-color: rgb(156, 178, 225);
+
+  &:hover {
+    color: #FFF;
+    background-color: rgb(0, 133, 161);
+  }
+}

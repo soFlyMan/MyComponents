@@ -1,0 +1,95 @@
+$avater: 45px;
+$nav-height: 60px;
+$padding: 85px;
+a {
+  color: #404040;
+}
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  filter: alpha(opacity=$opacity * 100);
+}
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+.blog {
+  width: 100%;
+  height: 100%;
+
+}
+
+.blog-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  padding: 0 $padding;
+  height: $nav-height;
+  background-color: #93E1FF;
+  flex-direction: row;
+  align-items: center;
+  z-index: 9999;
+  @include opacity(1);
+  @include transition(all 1s);
+}
+
+.blog-nav-none {
+  position: fixed;
+  top: -60px;
+  left: 0;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  padding: 0 $padding;
+  height: $nav-height;
+  background-color: #93E1FF;
+  flex-direction: row;
+  align-items: center;
+  z-index: 9999;
+  @include opacity(0.5);
+  @include transition(all 1s);
+}
+.blog-avater {
+  display: inline-block;
+  width: $avater;
+  height: $avater;
+  margin-left: 24px;
+
+  img{
+    width: $avater;
+    height: $avater;
+    border-radius: 50%;
+  }
+}
+.blog-name {
+  font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
+  margin-left: 6px;
+  color: #000;
+  font-weight: 600;
+  cursor: default;
+}
+.blog-nav-option {
+  position: absolute;
+  right: 300px;
+  font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
+  color: #404040;
+
+  li {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 24px;
+    font-size: 18px;
+    font-weight: 700;
+
+    &:hover {
+      opacity: .6;
+    }
+  }
+}

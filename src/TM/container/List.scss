@@ -1,0 +1,130 @@
+@mixin noneSelect() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.list-body {
+  width: 900px;
+  min-height: 600px;
+  margin: 0 auto;
+  padding: 20px 60px;
+  margin-top: 40px;
+  background: #FFF;
+  // border-radius: 8px;
+  // opacity: .6;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
+  .option {
+    font-size: 20px;
+    font-weight: 600;
+
+    span {
+      display: inline-block;
+      width: 100px;
+      height: 30px;
+      text-align: center;
+      line-height: 30px;
+      border-radius: 4px;
+      margin-right: 4px;
+      background-color: #dbe6ec;
+      cursor: pointer;
+      color: #2c3643;
+      // user-select: none;
+      @include noneSelect();
+
+      &:hover {
+        opacity: .6;
+      }
+    }
+
+    .active:hover {
+      opacity: 1;
+    }
+  }
+
+  .list-content {
+    width: 600px;
+    height: auto;
+    // border: 1px #CCC solid;
+    margin-top: 24px;
+
+    .list-main {
+      position: relative;
+    $time-width: 120px;
+    $content-width: 360px;
+    $item-height: 40px;
+
+    $checkbox-size: 18px;
+    #label {
+      display: inline-block;
+      position: absolute;
+      top: $item-height / 2 - $checkbox-size / 2;
+      left: 4px;
+      width: $checkbox-size;
+      height: $checkbox-size;
+      border-radius: 50%;
+      // background-color: #ccc;
+      border: 3px solid #ccc;
+    }
+    #toggle {
+      // width: 40px;
+      // height: $item-height;;
+      // border: 1px solid #ccc;
+      position: absolute;
+      left: -99999px;
+      @include noneSelect();
+
+      &:checked + label {
+        background: #F00;
+      }
+    }
+    input {
+      color: #f00;
+      font-size: 20px;
+      width: 360px;
+      height: 40px;
+      padding: 0;
+      border: 1px solid #ccc;
+    }
+
+    .item-time {
+      width: $time-width;
+      margin-left: 30px;
+      }
+
+      .list-items {
+        li {
+          border-bottom: 1px solid #ccc;
+          margin-left: 34px;
+          margin-top: 20px;
+          font-size: 24px;
+          color: #67747c;
+        }
+
+        input {
+          position: absolute;
+          left: -9999px;
+        }
+
+        label {
+          display: inline-block;
+          height: $item-height;
+          line-height: $item-height;
+        }
+        .label-time {
+          width: $time-width;
+          color: #CCC;
+          // border: 1px solid #F00;
+          // $content-width
+        }
+        .label-content {
+          width: $content-width;
+        }
+      }
+    }
+
+  }
+}

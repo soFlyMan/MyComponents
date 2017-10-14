@@ -1,0 +1,16 @@
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  margin-left: 12px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.default {
+  background: #fff;
+}

@@ -1,0 +1,210 @@
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  filter: alpha(opacity=$opacity * 100)
+}
+
+@mixin noneSelect() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+$sidebar-width: 260px;
+.tm-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: $sidebar-width;
+  height: 100%;
+  background-color: #FFF;
+  box-shadow: 1px 0 6px #93e1ff;
+  text-align: center;
+  @include transition(all .5s);
+
+  $packup: 36px;
+  .tm-packup {
+    position: absolute;
+    top: 0;
+    left: $sidebar-width - $packup;
+    width: $packup;
+    height: $packup;
+    font-size: $packup / 2;
+    line-height: $packup;
+    background: #FFF;
+    @include opacity(.5);
+    cursor: pointer;
+    @include transition(all .5s);
+  }
+  .tm-avater-z {
+    // display: none;
+    position: absolute;
+    top: 20px;
+    left: $sidebar-width / 4;
+    width: $sidebar-width / 2;
+    height: $sidebar-width / 2;
+    border-radius: 50%;
+    text-align: center;
+    line-height: $sidebar-width / 2;
+    font-size: 24px;
+    color: #FFF;
+    background: #000;
+    z-index: -1;
+    @include transition(all .5s);
+  }
+  .tm-avater {
+    width: $sidebar-width / 2;
+    height: $sidebar-width / 2;
+    border-radius: 50%;
+    margin-top: 20px;
+    @include transition(all .5s);
+
+    &:hover {
+      @include opacity(.6);
+    }
+
+  }
+
+  .tm-soFly {
+    color: #FFF;
+    font-size: 24px;
+    line-height: 24px;
+    margin-top: 8px;
+    @include transition(all .5s);
+  }
+
+  .tm-sidebar-ul {
+    margin-top: 12px;
+    height: 100%;
+    background-color: rgba(255 ,255 ,255 , .8);
+    text-align: left;
+    li {
+      text-indent: 12px;
+      width: $sidebar-width;
+      height: 54px;
+      color: #c4c4c4;
+      font-size: 20px;
+      line-height: 54px;
+      @include transition(all .5s);
+
+      &:hover {
+        color: #848383;
+        background-color: rgba(147 ,255 ,255, .2);
+      }
+    }
+  }
+}
+
+
+// pack up
+$packup-bg-color: #615F5F;
+.tm-sidebar-packup {
+  $sidebar-width: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: $sidebar-width;
+  height: 100%;
+  background-color: $packup-bg-color;
+  text-align: center;
+  @include transition(all .5s);
+
+
+  $packup: 36px;
+  .tm-packup {
+    position: absolute;
+    top: 0;
+    left: $sidebar-width;
+    width: $packup;
+    height: $packup;
+    font-size: $packup / 2;
+    line-height: $packup;
+    background: #eaeaea;
+    @include opacity(.5);
+    cursor: pointer;
+    @include transition(all .5s);
+  }
+
+  .tm-avater {
+    width: $sidebar-width / 2;
+    height: $sidebar-width / 2;
+    border-radius: 50%;
+    margin-top: 20px;
+    @include transition(all .5s);
+  }
+
+  .tm-avater-z {
+    position: absolute;
+    top: 20px;
+    left: $sidebar-width / 4;
+    width: $sidebar-width / 2;
+    height: $sidebar-width / 2;
+    border-radius: 50%;
+    text-align: center;
+    line-height: $sidebar-width / 2;
+    font-size: 0;
+    color: $packup-bg-color;
+    background: #000;
+    z-index: -1;
+    @include transition(all .5s);
+  }
+
+  .tm-soFly {
+    color: #FFF;
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 8px;
+    @include transition(all .5s);
+  }
+
+  .tm-sidebar-ul {
+    margin-top: 24px;
+    text-align: left;
+    li {
+      text-indent: 6px;
+      color: #c4c4c4;
+      width: $sidebar-width;
+      height: 36px;
+      margin-bottom: 4px;
+      font-size: 10px;
+      line-height: 36px;
+      @include transition(all .5s);
+
+
+    }
+  }
+}
+
+.tm {
+  width: 100%;
+  min-height: 100%;
+  background-color: #eaeaea;
+  // overflow: scroll;
+
+  .tm-body {
+    min-height: 100%;
+    @include transition(all .5s);
+    padding-bottom: 40px;
+    // overflow: scroll;
+
+  }
+  h1 {
+    padding-top: 40px;
+    // margin-left: $sidebar-width + 40;
+    font-size: 42px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.3);
+    text-shadow: -1px -1px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    @include noneSelect();
+  }
+
+}

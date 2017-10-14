@@ -15,8 +15,10 @@ $alpha: .2;
   // transition: all .4s;
   @include transition(all .4s);
 
+
   &:hover {
     background: rgba($red, $red, $red, $alpha);
     border-radius: 6px;
+    text-shadow: -1px -1px;
   }
 }

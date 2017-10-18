@@ -1,9 +1,12 @@
 const webpack = require('webpack')
+const hotMiddlewareScript = 'webpack-hot-middleware/client?reload=true'
 
 module.exports = {
   context: __dirname,
   entry: {
-    app: './app.dev.js',
+    app: [
+          'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
+          './app.js']
   },
   output: {
     path: __dirname + '/server/dist',
@@ -13,15 +16,21 @@ module.exports = {
   devServer: {
     contentBase: __dirname
   },
+  plugins: [
+        new webpack.optimize.OccurrenceOrderPlugin(),
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoEmitOnErrorsPlugin()
+    ],
   module: {
     rules: [
       {
         test: /\.jsx?$/,
         use: [{
           loader: 'babel-loader',
-          options: { presets: ['es2015', 'react'],
-                    plugins: [require('babel-plugin-transform-object-rest-spread')],
-                   },
+          options: {
+            presets: ['es2015', 'react'],
+            plugins: [require('babel-plugin-transform-object-rest-spread')]
+          },
           // query: { presets:['react'] },
         }]
       },

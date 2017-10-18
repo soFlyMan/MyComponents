@@ -4,10 +4,20 @@
   padding: 4px 12px;
   margin-right: 12px;
   cursor: pointer;
-  background-color: rgb(156, 178, 225);
+  // background-color: rgb(156, 178, 225);
+  background-color: #b3e7f9;
 
   &:hover {
     color: #FFF;
     background-color: rgb(0, 133, 161);
   }
+}
+.RV-tag-active {
+  display: inline-block;
+  border-radius: 12px;
+  padding: 4px 12px;
+  margin-right: 12px;
+  cursor: pointer;
+  color: #FFF;
+  background-color: rgb(0, 133, 161);
 }

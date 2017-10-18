@@ -8,6 +8,7 @@ import ProgressLine from '../ReactVersion/ProcessLine/ProcessLine.js'
 import BlogMain from './BlogMain.js'
 import BlogList from './BlogList.js'
 
+import { fetchAllTags, fetchAllBlogs, getBlogsByTag, handleActive } from './actions/fetch.js'
 
 import soFly from '../soFly.jpg'
 
@@ -17,8 +18,19 @@ class Blog extends Component {
     this.state = {
       blogNav: "blog-nav",
       top: 60,
-      toggle: props.isBlogToggled
+      toggle: props.isBlogToggled,
     }
+  }
+  componentDidMount() {
+    const { dispatch } = this.props
+    dispatch(fetchAllTags('/blog/getAllTags', {
+      method: 'GET',
+      credentials: 'same-origin',
+    }))
+    dispatch(fetchAllBlogs('/blog/getAllBlogs', {
+      method: 'GET',
+      credentials: 'same-origin',
+    }))
   }
   toggleNav(e) {
     e.deltaY >= 0 ? this.setState({  blogNav: "blog-nav-none", top: 0 }) : this.setState({  blogNav: "blog-nav", top: 60 })
@@ -31,13 +43,25 @@ class Blog extends Component {
       toggle: !toggle
     })
   }
+  handleTag(tagName) {
+    const { dispatch, } = this.props
+    dispatch(getBlogsByTag(tagName))
+    dispatch(handleActive(tagName))
+  }
   render() {
     var { url } = this.props.match
-    const { isBlogToggled } = this.props
+    const { isBlogToggled, tags, blogs, isTag} = this.props
     var toggleStyle = isBlogToggled?{
           backgroundColor: '#FFF',
           opacity: .9
         }:{}
+    const blogMainProps = {
+      toggle: this.state.toggle,
+      url,
+      tags,
+      isTag: isTag,
+      blogs,
+    }
     return (
       <div className="blog clearfix" onWheel={this.toggleNav.bind(this)}>
         <div className={this.state.blogNav}  style={toggleStyle}>
@@ -46,7 +70,7 @@ class Blog extends Component {
             <img src={soFly}/>
           </div>
           </Link>
-          <Link to="/blog"><span className="blog-name">soFly's Blog</span></Link>
+          <Link to="/blog/all"><span className="blog-name">soFly's Blog</span></Link>
           <ul className="blog-nav-option">
             <li><span onClick={this.handleToggle.bind(this)}>{isBlogToggled?'LIST':'FULLSCREEN'}</span></li>
             <Link to="/home"><li>HOME</li></Link>
@@ -57,17 +81,17 @@ class Blog extends Component {
 
         <ProgressLine color={"#afffc2"} top={this.state.top} transition={"top 1s"} display={isBlogToggled}/>
 
-          <Route exact path={`${url}/:id`} component={BlogList} />
-          <BlogMain toggle={this.state.toggle} url={url}/>
+          <BlogMain {...blogMainProps} handleTag={this.handleTag.bind(this)}/>
       </div>
     )
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    isBlogToggled: state.isBlogToggled.toggle
-  }
-}
+const mapStateToProps = state => ({
+  isBlogToggled: state.isBlogToggled.toggle,
+  tags: state.fetchingAllTags.data,
+  blogs: state.fetchingAllBlogs.data,
+  isTag: state.fetchingAllBlogs.isTag,
+})
 
 export default connect(mapStateToProps)(Blog)

@@ -1,12 +1,10 @@
 import React from 'react'
 import './Tag.scss'
 
-const Tag = ({ children }) => {
-  const tagStyle = {
-
-  }
+const Tag = ({ children, active }) => {
+  const isActive = active?'RV-tag-active':'RV-tag'
   return (
-    <p className="RV-tag" style={tagStyle}>{children || 'tag'}</p>
+    <p className={isActive}>{children || 'tag'}</p>
   )
 }
 

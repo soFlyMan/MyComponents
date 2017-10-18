@@ -36,6 +36,11 @@ $padding: 85px;
     .blog-type {
       height: 96px;
       overflow: scroll;
+      ul {
+        li {
+          display: inline-block;
+        }
+      }
     }
     .blog-list {
       height: 320px;
@@ -62,7 +67,8 @@ $padding: 85px;
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
-          font-weight: 600;
+          font-weight: 800;
+
 
           .public-date {
             font-size: 12px;

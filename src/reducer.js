@@ -1,6 +1,8 @@
 import { combineReducers, dispatch } from 'redux'
 import { isBlogToggled } from './blog/reducers/blogStyle.js'
 
+import { fetchingAllTags, fetchingAllBlogs } from './blog/reducers/fetch.js'
+
 const ADD = 'ADD'
 const DEC = 'DEC'
 
@@ -42,6 +44,10 @@ const Dec_count = (state=iniState,action) => {
   }
 }
 
-const app = combineReducers({Add_count, Dec_count, isBlogToggled})
+const app = combineReducers({
+  isBlogToggled,
+  fetchingAllTags,
+  fetchingAllBlogs,
+})
 
 export default app

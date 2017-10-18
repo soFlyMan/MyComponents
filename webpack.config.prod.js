@@ -3,7 +3,7 @@ const webpack = require('webpack')
 module.exports = {
   context: __dirname,
   entry: {
-    app: './app.dev.js',
+    app: './app.js',
   },
   output: {
     path: __dirname + '/server/dist',

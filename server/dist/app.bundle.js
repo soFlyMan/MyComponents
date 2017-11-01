@@ -1080,8 +1080,8 @@ module.exports = invariant;
 "use strict";
 
 
-var encode = __webpack_require__(168);
-var decode = __webpack_require__(169);
+var encode = __webpack_require__(169);
+var decode = __webpack_require__(170);
 
 var C_BACKSLASH = 92;
 
@@ -1605,8 +1605,8 @@ var locationsAreEqual = exports.locationsAreEqual = function locationsAreEqual(a
 
 
 var React = __webpack_require__(0);
-var Parser = __webpack_require__(166).Parser;
-var ReactRenderer = __webpack_require__(181);
+var Parser = __webpack_require__(167).Parser;
+var ReactRenderer = __webpack_require__(182);
 var propTypes = __webpack_require__(2);
 
 function ReactMarkdown(props) {
@@ -4744,8 +4744,8 @@ exports.default = ProcessLine;
 "use strict";
 
 
-var encode = __webpack_require__(170),
-    decode = __webpack_require__(171);
+var encode = __webpack_require__(171),
+    decode = __webpack_require__(172);
 
 exports.decode = function (data, level) {
 	return (!level || level <= 0 ? decode.XML : decode.HTML)(data);
@@ -4798,7 +4798,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(206);
+__webpack_require__(207);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4891,23 +4891,23 @@ var _NoMatch = __webpack_require__(143);
 
 var _NoMatch2 = _interopRequireDefault(_NoMatch);
 
-var _Home = __webpack_require__(144);
+var _Home = __webpack_require__(145);
 
 var _Home2 = _interopRequireDefault(_Home);
 
-var _Blog = __webpack_require__(162);
+var _Blog = __webpack_require__(163);
 
 var _Blog2 = _interopRequireDefault(_Blog);
 
-var _TimeManage = __webpack_require__(197);
+var _TimeManage = __webpack_require__(198);
 
 var _TimeManage2 = _interopRequireDefault(_TimeManage);
 
-var _Guide = __webpack_require__(208);
+var _Guide = __webpack_require__(209);
 
 var _Guide2 = _interopRequireDefault(_Guide);
 
-var _Admin = __webpack_require__(209);
+var _Admin = __webpack_require__(210);
 
 var _Admin2 = _interopRequireDefault(_Admin);
 
@@ -19262,7 +19262,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "h1,\nh2,\nh3,\nh4,\nh5,\nh6,\np,\nblockquote {\n  margin: 12px 0;\n  padding: 0;\n}\n\nblockquote {\n  margin: 12px 0;\n  padding: 0;\n}\n\nblockquote p {\n  font-size: inherit;\n}\n\ntable {\n  margin: 10px 0 15px 0;\n  border-collapse: collapse;\n}\n\ntd,\nth {\n  border: 1px solid #ddd;\n  padding: 3px 10px;\n}\n\nth {\n  padding: 5px 10px;\n}\n\na {\n  color: #0069d6;\n}\n\na:hover {\n  color: #0050a3;\n  text-decoration: none;\n}\n\na img {\n  border: none;\n}\n\np {\n  margin-bottom: 9px;\n  font-size: 24px;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  color: #404040;\n  line-height: 36px;\n}\n\nh1 {\n  margin-bottom: 18px;\n  font-size: 30px;\n}\n\nh2 {\n  font-size: 24px;\n}\n\nh3 {\n  font-size: 18px;\n}\n\nh4 {\n  font-size: 16px;\n}\n\nh5 {\n  font-size: 14px;\n}\n\nh6 {\n  font-size: 13px;\n}\n\nhr {\n  margin: 0 0 19px;\n  border: 0;\n  border-bottom: 1px solid #ccc;\n}\n\nblockquote {\n  color: gray;\n  font-style: italic;\n  font-size: .95em;\n  margin: 20px 0 20px;\n  padding: 10px 20px;\n  margin: 0 0 20px;\n  font-size: 17.5px;\n  border-left: 5px solid #eee;\n}\n\ncode,\npre {\n  font-family: Monaco, Andale Mono, Courier New, monospace;\n}\n\ncode {\n  background-color: #fee9cc;\n  color: rgba(0, 0, 0, 0.75);\n  padding: 1px 3px;\n  font-size: 12px;\n  -webkit-border-radius: 3px;\n  -moz-border-radius: 3px;\n  border-radius: 3px;\n}\n\npre {\n  display: block;\n  padding: 14px;\n  margin: 0 0 18px;\n  line-height: 16px;\n  font-size: 11px;\n  border: 1px solid #d9d9d9;\n  white-space: pre-wrap;\n  word-wrap: break-word;\n}\n\npre code {\n  background-color: #fff;\n  color: #737373;\n  font-size: 11px;\n  padding: 0;\n}\n\nsup {\n  font-size: 0.83em;\n  vertical-align: super;\n  line-height: 0;\n}\n\n* {\n  -webkit-print-color-adjust: exact;\n}\n\n@media screen and (min-width: 914px) {\n  body {\n    width: 854px;\n    margin: 0 auto;\n  }\n}\n\n@media print {\n  body,\n  code,\n  pre code,\n  h1,\n  h2,\n  h3,\n  h4,\n  h5,\n  h6 {\n    color: black;\n  }\n\n  table,\n  pre {\n    page-break-inside: avoid;\n  }\n}", ""]);
+exports.push([module.i, "h1,\nh2,\nh3,\nh4,\nh5,\nh6,\np,\nblockquote {\n  margin: 12px 0;\n  padding: 0;\n}\n\n.md p {\n  margin: 30px;\n  font-size: 18px;\n  line-height: 24px;\n}\n\n.md blockquote {\n  margin: 12px 0;\n  padding: 10px;\n}\n\n.md blockquote p {\n  margin: 4px;\n}\n\ntable {\n  margin: 10px 0 15px 0;\n  border-collapse: collapse;\n}\n\ntd,\nth {\n  border: 1px solid #ddd;\n  padding: 3px 10px;\n}\n\nth {\n  padding: 5px 10px;\n}\n\na {\n  color: #0069d6;\n}\n\na:hover {\n  color: #0050a3;\n  text-decoration: none;\n}\n\na img {\n  border: none;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  color: #404040;\n  line-height: 36px;\n}\n\nh1 {\n  margin-bottom: 18px;\n  font-size: 30px;\n}\n\nh2 {\n  font-size: 24px;\n}\n\nh3 {\n  font-size: 18px;\n}\n\nh4 {\n  font-size: 16px;\n}\n\nh5 {\n  font-size: 14px;\n}\n\nh6 {\n  font-size: 13px;\n}\n\nhr {\n  margin: 0 0 19px;\n  border: 0;\n  border-bottom: 1px solid #ccc;\n}\n\nblockquote {\n  color: gray;\n  font-style: italic;\n  font-size: .95em;\n  margin: 20px 0 20px;\n  padding: 10px 20px;\n  margin: 0 0 20px;\n  font-size: 17.5px;\n  border-left: 5px solid #eee;\n}\n\ncode,\npre {\n  font-family: Monaco, Andale Mono, Courier New, monospace;\n}\n\ncode {\n  background-color: #fee9cc;\n  color: rgba(0, 0, 0, 0.75);\n  padding: 1px 3px;\n  font-size: 12px;\n  -webkit-border-radius: 3px;\n  -moz-border-radius: 3px;\n  border-radius: 3px;\n}\n\npre {\n  display: block;\n  padding: 14px;\n  margin: 0 0 18px;\n  line-height: 16px;\n  font-size: 11px;\n  border: 1px solid #d9d9d9;\n  white-space: pre-wrap;\n  word-wrap: break-word;\n}\n\npre code {\n  background-color: #fff;\n  color: #737373;\n  font-size: 11px;\n  padding: 0;\n}\n\nsup {\n  font-size: 0.83em;\n  vertical-align: super;\n  line-height: 0;\n}\n\n* {\n  -webkit-print-color-adjust: exact;\n}\n\n@media screen and (min-width: 914px) {\n  body {\n    width: 854px;\n    margin: 0 auto;\n  }\n}\n\n@media print {\n  body,\n  code,\n  pre code,\n  h1,\n  h2,\n  h3,\n  h4,\n  h5,\n  h6 {\n    color: black;\n  }\n\n  table,\n  pre {\n    page-break-inside: avoid;\n  }\n}", ""]);
 
 // exports
 
@@ -19287,8 +19287,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var NoMatch = function NoMatch() {
   return _react2.default.createElement(
     'div',
-    null,
-    'Page Not Found'
+    { style: { width: '100%', height: '100%', textAlign: 'center', padding: 120 } },
+    _react2.default.createElement('img', { src: __webpack_require__(144) })
   );
 };
 
@@ -19296,6 +19296,12 @@ exports.default = NoMatch;
 
 /***/ }),
 /* 144 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "57a5f4bb70724df6517f1338ccd5eb23.png";
+
+/***/ }),
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19311,7 +19317,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(145);
+__webpack_require__(146);
 
 var _soFly = __webpack_require__(33);
 
@@ -19319,11 +19325,11 @@ var _soFly2 = _interopRequireDefault(_soFly);
 
 var _reactRouterDom = __webpack_require__(7);
 
-var _NativeVersion = __webpack_require__(148);
+var _NativeVersion = __webpack_require__(149);
 
 var _NativeVersion2 = _interopRequireDefault(_NativeVersion);
 
-var _ReactVersion = __webpack_require__(149);
+var _ReactVersion = __webpack_require__(150);
 
 var _ReactVersion2 = _interopRequireDefault(_ReactVersion);
 
@@ -19331,7 +19337,7 @@ var _ProcessLine = __webpack_require__(57);
 
 var _ProcessLine2 = _interopRequireDefault(_ProcessLine);
 
-var _HomeTag = __webpack_require__(159);
+var _HomeTag = __webpack_require__(160);
 
 var _HomeTag2 = _interopRequireDefault(_HomeTag);
 
@@ -19450,13 +19456,13 @@ var Home = function (_Component) {
 exports.default = Home;
 
 /***/ }),
-/* 145 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(146);
+var content = __webpack_require__(147);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -19481,7 +19487,7 @@ if(false) {
 }
 
 /***/ }),
-/* 146 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(undefined);
@@ -19489,19 +19495,19 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "@keyframes typing {\n  from {\n    width: 0;\n  }\n}\n\n@keyframes caret {\n  50% {\n    border-color: transparent;\n  }\n}\n\nhtml,\nbody,\n#root {\n  width: 100%;\n  height: 100%;\n}\n\n.home-container {\n  width: 100%;\n  height: 100%;\n}\n\n.home-container .home-page1 {\n  width: 100%;\n  height: 100%;\n  background-color: #FCFEFF;\n}\n\n.home-container .home-page1 .home-nav {\n  width: 100%;\n  height: 80%;\n  position: relative;\n  background: linear-gradient(to bottom, #93E2FF, #F5BEF6);\n  background: url(" + __webpack_require__(147) + ");\n  background-size: 100% 120%;\n}\n\n.home-container .home-page1 .home-nav .home-layer {\n  width: 100%;\n  height: 100%;\n  background: linear-gradient(to bottom, #93E2FF, #F5BEF6);\n  opacity: 0.4;\n}\n\n.home-container .home-page1 .home-nav .home-tag {\n  position: absolute;\n  top: 20%;\n  left: 16%;\n}\n\n.home-container .home-page1 .home-nav .home-avater {\n  position: absolute;\n  width: 120px;\n  height: 120px;\n  padding-right: 12px;\n  left: 50%;\n  transform: translateX(-50%);\n  bottom: -60px;\n  border-radius: 50%;\n  overflow: hidden;\n  z-index: 2;\n}\n\n.home-container .home-page1 .home-nav .home-avater img {\n  width: 120px;\n  height: 120px;\n  border-radius: 50%;\n  opacity: 1;\n}\n\n.home-container .home-page1 .home-desc {\n  display: -webkit-flex;\n  display: flex;\n  width: 100%;\n  height: 20%;\n  justify-content: center;\n}\n\n.home-container .home-page1 .home-desc .words {\n  width: 572px;\n  height: 26px;\n  position: relative;\n  top: 50%;\n  left: 0;\n}\n\n.home-container .home-page1 .home-desc .words h1 {\n  position: relative;\n  width: 48ch;\n  height: 24px;\n  padding-left: 1px;\n  background: #FFF;\n  text-align: left;\n  line-height: 24px;\n  font-size: 24px;\n  color: #5CCEF9;\n  overflow: hidden;\n  white-space: nowrap;\n  border-right: .05em solid #5CCEF9;\n  animation: typing 6s steps(48), caret 1s infinite steps(1);\n}\n\n.home-container .home-page1 .home-desc .words h1 span {\n  position: absolute;\n  right: 0px;\n  width: .5ch;\n  background: #FFF;\n  height: 24px;\n}\n\n.home-container .home-page2 {\n  width: 100%;\n  height: 100%;\n  background: #FCFEEF;\n}\n\n.home-container .home-page3 {\n  width: 100%;\n  height: 100%;\n  background: #FCFFFF;\n}", ""]);
+exports.push([module.i, "@keyframes typing {\n  from {\n    width: 0;\n  }\n}\n\n@keyframes caret {\n  50% {\n    border-color: transparent;\n  }\n}\n\nhtml,\nbody,\n#root {\n  width: 100%;\n  height: 100%;\n}\n\n.home-container {\n  width: 100%;\n  height: 100%;\n}\n\n.home-container .home-page1 {\n  width: 100%;\n  height: 100%;\n  background-color: #FCFEFF;\n}\n\n.home-container .home-page1 .home-nav {\n  width: 100%;\n  height: 80%;\n  position: relative;\n  background: linear-gradient(to bottom, #93E2FF, #F5BEF6);\n  background: url(" + __webpack_require__(148) + ");\n  background-size: 100% 120%;\n}\n\n.home-container .home-page1 .home-nav .home-layer {\n  width: 100%;\n  height: 100%;\n  background: linear-gradient(to bottom, #93E2FF, #F5BEF6);\n  opacity: 0.4;\n}\n\n.home-container .home-page1 .home-nav .home-tag {\n  position: absolute;\n  top: 20%;\n  left: 16%;\n}\n\n.home-container .home-page1 .home-nav .home-avater {\n  position: absolute;\n  width: 120px;\n  height: 120px;\n  padding-right: 12px;\n  left: 50%;\n  transform: translateX(-50%);\n  bottom: -60px;\n  border-radius: 50%;\n  overflow: hidden;\n  z-index: 2;\n}\n\n.home-container .home-page1 .home-nav .home-avater img {\n  width: 120px;\n  height: 120px;\n  border-radius: 50%;\n  opacity: 1;\n}\n\n.home-container .home-page1 .home-desc {\n  display: -webkit-flex;\n  display: flex;\n  width: 100%;\n  height: 20%;\n  justify-content: center;\n}\n\n.home-container .home-page1 .home-desc .words {\n  width: 572px;\n  height: 26px;\n  position: relative;\n  top: 50%;\n  left: 0;\n}\n\n.home-container .home-page1 .home-desc .words h1 {\n  position: relative;\n  width: 50ch;\n  height: 28px;\n  padding-left: 2px;\n  background: #FFF;\n  text-align: left;\n  line-height: 28px;\n  font-size: 24px;\n  color: #5CCEF9;\n  overflow: hidden;\n  white-space: nowrap;\n  border-right: .05em solid #5CCEF9;\n  animation: typing 6s steps(48), caret 1s infinite steps(1);\n}\n\n.home-container .home-page1 .home-desc .words h1 span {\n  position: absolute;\n  right: 0px;\n  width: .5ch;\n  background: #FFF;\n  height: 24px;\n}\n\n.home-container .home-page2 {\n  width: 100%;\n  height: 100%;\n  background: #FCFEEF;\n}\n\n.home-container .home-page3 {\n  width: 100%;\n  height: 100%;\n  background: #FCFFFF;\n}", ""]);
 
 // exports
 
 
 /***/ }),
-/* 147 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "7171103ddf97c5e171cc79e52acf64fd.png";
 
 /***/ }),
-/* 148 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19579,7 +19585,7 @@ var NativeVersion = function (_Component) {
 exports.default = NativeVersion;
 
 /***/ }),
-/* 149 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19597,15 +19603,15 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(7);
 
-var _ToolBar = __webpack_require__(150);
+var _ToolBar = __webpack_require__(151);
 
 var _ToolBar2 = _interopRequireDefault(_ToolBar);
 
-var _Test = __webpack_require__(155);
+var _Test = __webpack_require__(156);
 
 var _Test2 = _interopRequireDefault(_Test);
 
-var _Modal = __webpack_require__(156);
+var _Modal = __webpack_require__(157);
 
 var _Modal2 = _interopRequireDefault(_Modal);
 
@@ -19674,7 +19680,7 @@ var ReactVersion = function (_Component) {
 exports.default = ReactVersion;
 
 /***/ }),
-/* 150 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19690,9 +19696,9 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(151);
+__webpack_require__(152);
 
-__webpack_require__(153);
+__webpack_require__(154);
 
 var _reactRouterDom = __webpack_require__(7);
 
@@ -19746,13 +19752,13 @@ var ToolBar = function (_Component) {
 exports.default = ToolBar;
 
 /***/ }),
-/* 151 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(152);
+var content = __webpack_require__(153);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -19777,7 +19783,7 @@ if(false) {
 }
 
 /***/ }),
-/* 152 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(undefined);
@@ -19791,13 +19797,13 @@ exports.push([module.i, "", ""]);
 
 
 /***/ }),
-/* 153 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(154);
+var content = __webpack_require__(155);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -19822,7 +19828,7 @@ if(false) {
 }
 
 /***/ }),
-/* 154 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(undefined);
@@ -19836,7 +19842,7 @@ exports.push([module.i, ".toolbar-item,\n.toolbar-layer {\n  background-image: u
 
 
 /***/ }),
-/* 155 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19863,7 +19869,7 @@ var Test = function Test() {
 exports.default = Test;
 
 /***/ }),
-/* 156 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19877,7 +19883,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(157);
+__webpack_require__(158);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -19888,13 +19894,13 @@ var Modal = function Modal() {
 exports.default = Modal;
 
 /***/ }),
-/* 157 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(158);
+var content = __webpack_require__(159);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -19919,7 +19925,7 @@ if(false) {
 }
 
 /***/ }),
-/* 158 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(undefined);
@@ -19933,7 +19939,7 @@ exports.push([module.i, ".modal-container {\n  position: fixed;\n  width: 100%;\
 
 
 /***/ }),
-/* 159 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19947,7 +19953,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(160);
+__webpack_require__(161);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -19971,13 +19977,13 @@ var HomeTag = function HomeTag(_ref) {
 exports.default = HomeTag;
 
 /***/ }),
-/* 160 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(161);
+var content = __webpack_require__(162);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -20002,7 +20008,7 @@ if(false) {
 }
 
 /***/ }),
-/* 161 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(undefined);
@@ -20016,7 +20022,7 @@ exports.push([module.i, ".hometag {\n  padding: 12px;\n  text-align: center;\n  
 
 
 /***/ }),
-/* 162 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20038,7 +20044,7 @@ var _reactRedux = __webpack_require__(9);
 
 var _reactRouterDom = __webpack_require__(7);
 
-__webpack_require__(163);
+__webpack_require__(164);
 
 var _blogStyle = __webpack_require__(56);
 
@@ -20046,11 +20052,11 @@ var _ProcessLine = __webpack_require__(57);
 
 var _ProcessLine2 = _interopRequireDefault(_ProcessLine);
 
-var _BlogMain = __webpack_require__(165);
+var _BlogMain = __webpack_require__(166);
 
 var _BlogMain2 = _interopRequireDefault(_BlogMain);
 
-var _BlogList = __webpack_require__(196);
+var _BlogList = __webpack_require__(197);
 
 var _BlogList2 = _interopRequireDefault(_BlogList);
 
@@ -20200,14 +20206,22 @@ var Blog = function (_Component) {
               )
             ),
             _react2.default.createElement(
-              'li',
-              null,
-              'PROTFLIO'
+              _reactRouterDom.Link,
+              { to: '/protflio' },
+              _react2.default.createElement(
+                'li',
+                null,
+                'PROTFLIO'
+              )
             ),
             _react2.default.createElement(
-              'li',
-              null,
-              'TAGS'
+              _reactRouterDom.Link,
+              { to: '/protflio' },
+              _react2.default.createElement(
+                'li',
+                null,
+                'TAGS'
+              )
             )
           )
         ),
@@ -20232,13 +20246,13 @@ var mapStateToProps = function mapStateToProps(state) {
 exports.default = (0, _reactRedux.connect)(mapStateToProps)(Blog);
 
 /***/ }),
-/* 163 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(164);
+var content = __webpack_require__(165);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -20263,7 +20277,7 @@ if(false) {
 }
 
 /***/ }),
-/* 164 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(undefined);
@@ -20277,7 +20291,7 @@ exports.push([module.i, "a {\n  color: #404040;\n}\n\n.blog {\n  width: 100%;\n 
 
 
 /***/ }),
-/* 165 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20301,19 +20315,19 @@ var _reactMarkdown2 = _interopRequireDefault(_reactMarkdown);
 
 var _reactRouterDom = __webpack_require__(7);
 
-__webpack_require__(186);
+__webpack_require__(187);
 
-__webpack_require__(188);
+__webpack_require__(189);
 
-var _Tag = __webpack_require__(191);
+var _Tag = __webpack_require__(192);
 
 var _Tag2 = _interopRequireDefault(_Tag);
 
-var _BlogMainBody = __webpack_require__(194);
+var _BlogMainBody = __webpack_require__(195);
 
 var _BlogMainBody2 = _interopRequireDefault(_BlogMainBody);
 
-var _BlogMainAll = __webpack_require__(195);
+var _BlogMainAll = __webpack_require__(196);
 
 var _BlogMainAll2 = _interopRequireDefault(_BlogMainAll);
 
@@ -20431,7 +20445,7 @@ BlogMain.propTypes = {
 exports.default = BlogMain;
 
 /***/ }),
-/* 166 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20450,12 +20464,12 @@ exports.default = BlogMain;
 
 module.exports.version = '0.24.0';
 module.exports.Node = __webpack_require__(34);
-module.exports.Parser = __webpack_require__(167);
-module.exports.HtmlRenderer = __webpack_require__(179);
-module.exports.XmlRenderer = __webpack_require__(180);
+module.exports.Parser = __webpack_require__(168);
+module.exports.HtmlRenderer = __webpack_require__(180);
+module.exports.XmlRenderer = __webpack_require__(181);
 
 /***/ }),
-/* 167 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20475,7 +20489,7 @@ var C_LESSTHAN = 60;
 var C_SPACE = 32;
 var C_OPEN_BRACKET = 91;
 
-var InlineParser = __webpack_require__(175);
+var InlineParser = __webpack_require__(176);
 
 var reHtmlBlockOpen = [/./, // dummy for 0
 /^<(?:script|pre|style)(?:\s|>|$)/i, /^<!--/, /^<[?]/, /^<![A-Z]/, /^<!\[CDATA\[/, /^<[/]?(?:address|article|aside|base|basefont|blockquote|body|caption|center|col|colgroup|dd|details|dialog|dir|div|dl|dt|fieldset|figcaption|figure|footer|form|frame|frameset|h1|head|header|hr|html|iframe|legend|li|link|main|menu|menuitem|meta|nav|noframes|ol|optgroup|option|p|param|section|source|title|summary|table|tbody|td|tfoot|th|thead|title|tr|track|ul)(?:\s|[/]?[>]|$)/i, new RegExp('^(?:' + OPENTAG + '|' + CLOSETAG + ')\s*$', 'i')];
@@ -21320,7 +21334,7 @@ function Parser(options) {
 module.exports = Parser;
 
 /***/ }),
-/* 168 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21428,7 +21442,7 @@ encode.componentChars = "-_.!~*'()";
 module.exports = encode;
 
 /***/ }),
-/* 169 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21562,7 +21576,7 @@ decode.componentChars = '';
 module.exports = decode;
 
 /***/ }),
-/* 170 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21637,16 +21651,16 @@ function escapeXML(data) {
 exports.escape = escapeXML;
 
 /***/ }),
-/* 171 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var entityMap = __webpack_require__(60),
-    legacyMap = __webpack_require__(172),
+    legacyMap = __webpack_require__(173),
     xmlMap = __webpack_require__(59),
-    decodeCodePoint = __webpack_require__(173);
+    decodeCodePoint = __webpack_require__(174);
 
 var decodeXMLStrict = getStrictDecoder(xmlMap),
     decodeHTMLStrict = getStrictDecoder(entityMap);
@@ -21715,19 +21729,19 @@ module.exports = {
 };
 
 /***/ }),
-/* 172 */
+/* 173 */
 /***/ (function(module, exports) {
 
 module.exports = {"Aacute":"Á","aacute":"á","Acirc":"Â","acirc":"â","acute":"´","AElig":"Æ","aelig":"æ","Agrave":"À","agrave":"à","amp":"&","AMP":"&","Aring":"Å","aring":"å","Atilde":"Ã","atilde":"ã","Auml":"Ä","auml":"ä","brvbar":"¦","Ccedil":"Ç","ccedil":"ç","cedil":"¸","cent":"¢","copy":"©","COPY":"©","curren":"¤","deg":"°","divide":"÷","Eacute":"É","eacute":"é","Ecirc":"Ê","ecirc":"ê","Egrave":"È","egrave":"è","ETH":"Ð","eth":"ð","Euml":"Ë","euml":"ë","frac12":"½","frac14":"¼","frac34":"¾","gt":">","GT":">","Iacute":"Í","iacute":"í","Icirc":"Î","icirc":"î","iexcl":"¡","Igrave":"Ì","igrave":"ì","iquest":"¿","Iuml":"Ï","iuml":"ï","laquo":"«","lt":"<","LT":"<","macr":"¯","micro":"µ","middot":"·","nbsp":" ","not":"¬","Ntilde":"Ñ","ntilde":"ñ","Oacute":"Ó","oacute":"ó","Ocirc":"Ô","ocirc":"ô","Ograve":"Ò","ograve":"ò","ordf":"ª","ordm":"º","Oslash":"Ø","oslash":"ø","Otilde":"Õ","otilde":"õ","Ouml":"Ö","ouml":"ö","para":"¶","plusmn":"±","pound":"£","quot":"\"","QUOT":"\"","raquo":"»","reg":"®","REG":"®","sect":"§","shy":"­","sup1":"¹","sup2":"²","sup3":"³","szlig":"ß","THORN":"Þ","thorn":"þ","times":"×","Uacute":"Ú","uacute":"ú","Ucirc":"Û","ucirc":"û","Ugrave":"Ù","ugrave":"ù","uml":"¨","Uuml":"Ü","uuml":"ü","Yacute":"Ý","yacute":"ý","yen":"¥","yuml":"ÿ"}
 
 /***/ }),
-/* 173 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var decodeMap = __webpack_require__(174);
+var decodeMap = __webpack_require__(175);
 
 module.exports = decodeCodePoint;
 
@@ -21755,13 +21769,13 @@ function decodeCodePoint(codePoint) {
 }
 
 /***/ }),
-/* 174 */
+/* 175 */
 /***/ (function(module, exports) {
 
 module.exports = {"0":65533,"128":8364,"130":8218,"131":402,"132":8222,"133":8230,"134":8224,"135":8225,"136":710,"137":8240,"138":352,"139":8249,"140":338,"142":381,"145":8216,"146":8217,"147":8220,"148":8221,"149":8226,"150":8211,"151":8212,"152":732,"153":8482,"154":353,"155":8250,"156":339,"158":382,"159":376}
 
 /***/ }),
-/* 175 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21769,13 +21783,13 @@ module.exports = {"0":65533,"128":8364,"130":8218,"131":402,"132":8222,"133":823
 
 var Node = __webpack_require__(34);
 var common = __webpack_require__(11);
-var normalizeReference = __webpack_require__(176);
+var normalizeReference = __webpack_require__(177);
 
 var normalizeURI = common.normalizeURI;
 var unescapeString = common.unescapeString;
-var fromCodePoint = __webpack_require__(177);
+var fromCodePoint = __webpack_require__(178);
 var decodeHTML = __webpack_require__(58).decodeHTML;
-__webpack_require__(178); // Polyfill for String.prototype.repeat
+__webpack_require__(179); // Polyfill for String.prototype.repeat
 
 // Constants for character codes:
 
@@ -22664,7 +22678,7 @@ function InlineParser(options) {
 module.exports = InlineParser;
 
 /***/ }),
-/* 176 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22712,7 +22726,7 @@ module.exports = function (string) {
 };
 
 /***/ }),
-/* 177 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22778,7 +22792,7 @@ if (String.fromCodePoint) {
 }
 
 /***/ }),
-/* 178 */
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22838,7 +22852,7 @@ if (!String.prototype.repeat) {
 }
 
 /***/ }),
-/* 179 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23127,7 +23141,7 @@ function HtmlRenderer(options) {
 module.exports = HtmlRenderer;
 
 /***/ }),
-/* 180 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23309,17 +23323,17 @@ function XmlRenderer(options) {
 module.exports = XmlRenderer;
 
 /***/ }),
-/* 181 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var React = __webpack_require__(0);
-var assign = __webpack_require__(182);
-var isPlainObject = __webpack_require__(183);
-var xssFilters = __webpack_require__(184);
-var pascalCase = __webpack_require__(185);
+var assign = __webpack_require__(183);
+var isPlainObject = __webpack_require__(184);
+var xssFilters = __webpack_require__(185);
+var pascalCase = __webpack_require__(186);
 
 var typeAliases = {
     blockquote: 'block_quote',
@@ -23719,7 +23733,7 @@ ReactRenderer.renderers = coreTypes.reduce(function (renderers, type) {
 module.exports = ReactRenderer;
 
 /***/ }),
-/* 182 */
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24355,7 +24369,7 @@ function keys(object) {
 module.exports = assign;
 
 /***/ }),
-/* 183 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24502,7 +24516,7 @@ function isPlainObject(value) {
 module.exports = isPlainObject;
 
 /***/ }),
-/* 184 */
+/* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25570,7 +25584,7 @@ exports.uriFragmentInHTMLData = exports.uriComponentInHTMLData;
 exports.uriFragmentInHTMLComment = exports.uriComponentInHTMLComment;
 
 /***/ }),
-/* 185 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25601,13 +25615,13 @@ function pascalcase(str) {
 module.exports = pascalcase;
 
 /***/ }),
-/* 186 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(187);
+var content = __webpack_require__(188);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -25632,7 +25646,7 @@ if(false) {
 }
 
 /***/ }),
-/* 187 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(undefined);
@@ -25646,13 +25660,13 @@ exports.push([module.i, ".blog-body {\n  padding: 100px 85px;\n  height: 100%;\n
 
 
 /***/ }),
-/* 188 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(189);
+var content = __webpack_require__(190);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -25677,7 +25691,7 @@ if(false) {
 }
 
 /***/ }),
-/* 189 */
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(undefined);
@@ -25685,19 +25699,19 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "@charset \"UTF-8\";\n\n.blog-article {\n  min-height: 600px;\n  width: 860px;\n  padding: 40px;\n  background-color: #FFF;\n  text-align: center;\n  float: right;\n  overflow-y: scroll;\n  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);\n  border-radius: 4px;\n  transition: all .5s;\n}\n\n.blog-article .blog-title .blog-tags li {\n  display: inline-block;\n}\n\n.blog-article .blog-title h1 {\n  font-size: 24px;\n  font-family: serif;\n  font-weight: 700;\n}\n\n@media screen and (max-width: 1400px) {\n  .blog-article {\n    width: auto;\n    float: none;\n    margin: 0 auto;\n  }\n}\n\n.blog-sidebar-toggle {\n  height: 0;\n  transition: all .5s;\n}\n\n.blog-all-public .blog-all-single {\n  width: 100%;\n  height: 140px;\n  text-align: left;\n  font-size: 24px;\n  font-weight: 500;\n  padding: 20px;\n  margin-bottom: 120px;\n}\n\n.blog-all-public .blog-all-single:hover {\n  color: #0085a1;\n}\n\n.blog-all-public .blog-all-single hr {\n  width: 60%;\n  margin-top: 40px;\n  margin-bottom: 20px;\n  border-color: #eee;\n}\n\n.blog-all-public .blog-all-title {\n  font-size: 36px;\n  font-weight: 700;\n}\n\n.blog-all-public .blog-all-desc {\n  font-size: 36px;\n  height: 60px;\n  font-weight: 700;\n  font-style: italic;\n  color: #3ca3c9;\n}\n\n.blog-all-public .blog-all-desc p {\n  font-size: 24px;\n}\n\n.blog-all-public .blog-all-body {\n  width: 60%;\n  height: 120px;\n  font-size: 18px;\n  line-height: 26px;\n  font-style: italic;\n  color: #a3a3a3;\n  overflow: hidden;\n  text-overflow: \"\\2026\";\n}\n\n.blog-all-public .blog-all-body:hover {\n  color: #0085a1;\n}\n\n.blog-all-public .blog-all-date {\n  font-size: 20px;\n  font-style: italic;\n  color: #ccc;\n}\n\n.blog-article-toggle {\n  position: absolute;\n  top: 0;\n  left: 0;\n  text-align: center;\n  width: 100%;\n  min-height: 120%;\n  background: url(" + __webpack_require__(190) + ") no-repeat;\n  background-size: 100% 580px;\n  background-color: #FFF;\n  transition: all .5s;\n}\n\n.blog-article-toggle .blog-all {\n  position: absolute;\n  top: 580px;\n  left: 15%;\n}\n\n.blog-article-toggle .blog-all .blog-all-desc {\n  position: absolute;\n  font-size: 46px;\n  top: -330px;\n  left: 30%;\n  font-weight: 700;\n  color: #FFF;\n  text-shadow: 0 0 4px;\n}\n\n.blog-article-toggle .blog-title {\n  position: absolute;\n  left: 20%;\n  text-align: left;\n  margin-top: 234px;\n}\n\n.blog-article-toggle .blog-title .blog-tags li {\n  display: inline-block;\n  color: #FFF;\n  font-size: 14px;\n  border: 1px solid #FFF;\n  border-radius: 20px;\n  padding: 4px 8px;\n  margin: 0 12px 40px 0;\n  cursor: pointer;\n}\n\n.blog-article-toggle .blog-title .blog-tags li:hover {\n  background-color: rgba(255, 255, 255, 0.5);\n}\n\n.blog-article-toggle .blog-title h1 {\n  font-size: 56px;\n  color: #FFF;\n}\n\n.blog-article-toggle .blog-title i {\n  font-size: 24px;\n  color: #FFF;\n  font-style: italic;\n  line-height: 38px;\n}\n\n.blog-article-toggle .blog-main-body {\n  position: absolute;\n  top: 580px;\n  left: 15%;\n  text-align: left;\n  width: 60%;\n}\n\n.blog-article-toggle .blog-main-body div {\n  margin-bottom: 24px;\n}", ""]);
+exports.push([module.i, "@charset \"UTF-8\";\n\n.blog-article {\n  min-height: 600px;\n  width: 860px;\n  padding: 40px;\n  background-color: #FFF;\n  text-align: left;\n  float: right;\n  overflow-y: scroll;\n  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);\n  border-radius: 4px;\n  transition: all .5s;\n}\n\n.blog-article .blog-title {\n  text-align: center;\n}\n\n.blog-article .blog-title .blog-tags {\n  text-align: left;\n}\n\n.blog-article .blog-title .blog-tags li {\n  display: inline-block;\n  margin-right: 8px;\n  background: #77ddff;\n  border-radius: 2px;\n  padding: 4px;\n}\n\n.blog-article .blog-title h1 {\n  font-size: 24px;\n  font-family: serif;\n  font-weight: 700;\n}\n\n@media screen and (max-width: 1400px) {\n  .blog-article {\n    width: auto;\n    float: none;\n    margin: 0 auto;\n  }\n}\n\n.blog-sidebar-toggle {\n  height: 0;\n  transition: all .5s;\n}\n\n.blog-all-public .blog-all-single {\n  width: 100%;\n  height: 140px;\n  text-align: left;\n  font-size: 24px;\n  font-weight: 500;\n  padding: 20px;\n  margin-bottom: 120px;\n}\n\n.blog-all-public .blog-all-single:hover {\n  color: #0085a1;\n}\n\n.blog-all-public .blog-all-single hr {\n  width: 60%;\n  margin-top: 40px;\n  margin-bottom: 20px;\n  border-color: #eee;\n}\n\n.blog-all-public .blog-all-title {\n  font-size: 36px;\n  font-weight: 700;\n}\n\n.blog-all-public .blog-all-desc {\n  font-size: 36px;\n  height: 60px;\n  font-weight: 700;\n  font-style: italic;\n  color: #3ca3c9;\n  text-align: center;\n}\n\n.blog-all-public .blog-all-desc p {\n  font-size: 24px;\n}\n\n.blog-all-public .blog-all-body {\n  width: 60%;\n  height: 120px;\n  font-size: 18px;\n  line-height: 26px;\n  font-style: italic;\n  color: #a3a3a3;\n  overflow: hidden;\n  text-overflow: \"\\2026\";\n}\n\n.blog-all-public .blog-all-body:hover {\n  color: #0085a1;\n}\n\n.blog-all-public .blog-all-date {\n  font-size: 20px;\n  font-style: italic;\n  color: #ccc;\n}\n\n.blog-article-toggle {\n  position: absolute;\n  top: 0;\n  left: 0;\n  text-align: center;\n  width: 100%;\n  min-height: 120%;\n  background: url(" + __webpack_require__(191) + ") no-repeat;\n  background-size: 100% 580px;\n  background-color: #FFF;\n  transition: all .5s;\n}\n\n.blog-article-toggle .blog-all {\n  position: absolute;\n  top: 580px;\n  left: 15%;\n}\n\n.blog-article-toggle .blog-all .blog-all-desc {\n  position: absolute;\n  font-size: 46px;\n  top: -330px;\n  left: 30%;\n  font-weight: 700;\n  color: #FFF;\n  text-shadow: 0 0 4px;\n}\n\n.blog-article-toggle .blog-title {\n  position: absolute;\n  left: 20%;\n  text-align: left;\n  margin-top: 234px;\n}\n\n.blog-article-toggle .blog-title .blog-tags li {\n  display: inline-block;\n  color: #FFF;\n  font-size: 14px;\n  border: 1px solid #FFF;\n  border-radius: 20px;\n  padding: 4px 8px;\n  margin: 0 12px 40px 0;\n  cursor: pointer;\n}\n\n.blog-article-toggle .blog-title .blog-tags li:hover {\n  background-color: rgba(255, 255, 255, 0.5);\n}\n\n.blog-article-toggle .blog-title h1 {\n  font-size: 56px;\n  color: #FFF;\n}\n\n.blog-article-toggle .blog-title i {\n  font-size: 24px;\n  color: #FFF;\n  font-style: italic;\n  line-height: 38px;\n}\n\n.blog-article-toggle .blog-main-body {\n  position: absolute;\n  top: 580px;\n  left: 15%;\n  text-align: left;\n  width: 60%;\n}\n\n.blog-article-toggle .blog-main-body div {\n  margin: 30px;\n}", ""]);
 
 // exports
 
 
 /***/ }),
-/* 190 */
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "7171103ddf97c5e171cc79e52acf64fd.png";
 
 /***/ }),
-/* 191 */
+/* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25711,7 +25725,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(192);
+__webpack_require__(193);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25730,13 +25744,13 @@ var Tag = function Tag(_ref) {
 exports.default = Tag;
 
 /***/ }),
-/* 192 */
+/* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(193);
+var content = __webpack_require__(194);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -25761,7 +25775,7 @@ if(false) {
 }
 
 /***/ }),
-/* 193 */
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(undefined);
@@ -25775,7 +25789,7 @@ exports.push([module.i, ".RV-tag {\n  display: inline-block;\n  border-radius: 1
 
 
 /***/ }),
-/* 194 */
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25864,7 +25878,7 @@ var BlogMainBody = function (_Component) {
           ),
           _react2.default.createElement(
             'div',
-            { className: 'blog-main-body' },
+            { className: 'blog-main-body md' },
             _react2.default.createElement(_reactMarkdown2.default, { source: blog.body })
           )
         );
@@ -25889,7 +25903,7 @@ BlogMainBody.propTypes = {
 exports.default = (0, _reactRedux.connect)(mapStateToProps)(BlogMainBody);
 
 /***/ }),
-/* 195 */
+/* 196 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26003,7 +26017,7 @@ BlogMainAll.propTypes = {
 exports.default = (0, _reactRedux.connect)(mapStateToProps)(BlogMainAll);
 
 /***/ }),
-/* 196 */
+/* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26030,7 +26044,7 @@ var BlogList = function BlogList() {
 exports.default = BlogList;
 
 /***/ }),
-/* 197 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26048,17 +26062,17 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(7);
 
-__webpack_require__(198);
+__webpack_require__(199);
 
 var _soFly = __webpack_require__(33);
 
 var _soFly2 = _interopRequireDefault(_soFly);
 
-var _Plan = __webpack_require__(200);
+var _Plan = __webpack_require__(201);
 
 var _Plan2 = _interopRequireDefault(_Plan);
 
-var _List = __webpack_require__(203);
+var _List = __webpack_require__(204);
 
 var _List2 = _interopRequireDefault(_List);
 
@@ -26241,13 +26255,13 @@ var TimeManage = function (_Component) {
 exports.default = TimeManage;
 
 /***/ }),
-/* 198 */
+/* 199 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(199);
+var content = __webpack_require__(200);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -26272,7 +26286,7 @@ if(false) {
 }
 
 /***/ }),
-/* 199 */
+/* 200 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(undefined);
@@ -26286,7 +26300,7 @@ exports.push([module.i, ".tm-sidebar {\n  position: fixed;\n  top: 0;\n  left: 0
 
 
 /***/ }),
-/* 200 */
+/* 201 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26304,7 +26318,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRedux = __webpack_require__(9);
 
-__webpack_require__(201);
+__webpack_require__(202);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26343,13 +26357,13 @@ var mapStateToProps = function mapStateToProps(state) {
 exports.default = (0, _reactRedux.connect)(mapStateToProps)(Plan);
 
 /***/ }),
-/* 201 */
+/* 202 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(202);
+var content = __webpack_require__(203);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -26374,7 +26388,7 @@ if(false) {
 }
 
 /***/ }),
-/* 202 */
+/* 203 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(undefined);
@@ -26388,7 +26402,7 @@ exports.push([module.i, ".plan-body {\n  width: 800px;\n  min-height: 600px;\n  
 
 
 /***/ }),
-/* 203 */
+/* 204 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26406,7 +26420,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRedux = __webpack_require__(9);
 
-__webpack_require__(204);
+__webpack_require__(205);
 
 var _Button = __webpack_require__(61);
 
@@ -26608,13 +26622,13 @@ var mapStateToProps = function mapStateToProps(state) {
 exports.default = (0, _reactRedux.connect)(mapStateToProps)(List);
 
 /***/ }),
-/* 204 */
+/* 205 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(205);
+var content = __webpack_require__(206);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -26639,7 +26653,7 @@ if(false) {
 }
 
 /***/ }),
-/* 205 */
+/* 206 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(undefined);
@@ -26653,13 +26667,13 @@ exports.push([module.i, ".list-body {\n  width: 900px;\n  min-height: 600px;\n  
 
 
 /***/ }),
-/* 206 */
+/* 207 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(207);
+var content = __webpack_require__(208);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -26684,7 +26698,7 @@ if(false) {
 }
 
 /***/ }),
-/* 207 */
+/* 208 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(undefined);
@@ -26698,7 +26712,7 @@ exports.push([module.i, ".button {\n  display: inline-block;\n  border-radius: 4
 
 
 /***/ }),
-/* 208 */
+/* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26767,7 +26781,7 @@ var Guide = function (_Component) {
 exports.default = Guide;
 
 /***/ }),
-/* 209 */
+/* 210 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26787,11 +26801,11 @@ var _reactRedux = __webpack_require__(9);
 
 var _reactRouterDom = __webpack_require__(7);
 
-var _BlogAdmin = __webpack_require__(210);
+var _BlogAdmin = __webpack_require__(211);
 
 var _BlogAdmin2 = _interopRequireDefault(_BlogAdmin);
 
-__webpack_require__(220);
+__webpack_require__(221);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26866,7 +26880,7 @@ var mapStateToProps = function mapStateToProps(state) {
 exports.default = (0, _reactRedux.connect)(mapStateToProps)(Admin);
 
 /***/ }),
-/* 210 */
+/* 211 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26882,15 +26896,15 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(7);
 
-var _AddBlog = __webpack_require__(211);
+var _AddBlog = __webpack_require__(212);
 
 var _AddBlog2 = _interopRequireDefault(_AddBlog);
 
-var _Scroll = __webpack_require__(217);
+var _Scroll = __webpack_require__(218);
 
 var _Scroll2 = _interopRequireDefault(_Scroll);
 
-__webpack_require__(218);
+__webpack_require__(219);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26940,7 +26954,7 @@ var BlogAdmin = function BlogAdmin() {
 exports.default = BlogAdmin;
 
 /***/ }),
-/* 211 */
+/* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26956,13 +26970,13 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(212);
+__webpack_require__(213);
 
 var _reactMarkdown = __webpack_require__(18);
 
 var _reactMarkdown2 = _interopRequireDefault(_reactMarkdown);
 
-var _BlogWorkSpace = __webpack_require__(214);
+var _BlogWorkSpace = __webpack_require__(215);
 
 var _BlogWorkSpace2 = _interopRequireDefault(_BlogWorkSpace);
 
@@ -27048,14 +27062,22 @@ var AddBlog = function (_Component) {
         body: body,
         tag: tag
       };
-      console.log(blog);
+      console.log(123, blog);
       fetch('/blog/addBlog', {
         method: 'POST',
         credentials: 'same-origin',
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json"
         },
         body: JSON.stringify(blog)
+      }).then(function (res) {
+        if (res.ok) {
+          res.json().then(function (data) {
+            console.log(data);
+          });
+        }
+      }).catch(function (err) {
+        console.log(err);
       });
     }
   }, {
@@ -27104,13 +27126,13 @@ var AddBlog = function (_Component) {
 exports.default = AddBlog;
 
 /***/ }),
-/* 212 */
+/* 213 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(213);
+var content = __webpack_require__(214);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -27135,7 +27157,7 @@ if(false) {
 }
 
 /***/ }),
-/* 213 */
+/* 214 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(undefined);
@@ -27149,7 +27171,7 @@ exports.push([module.i, ".add-blog-title {\n  position: relative;\n}\n\n.add-blo
 
 
 /***/ }),
-/* 214 */
+/* 215 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27165,7 +27187,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(215);
+__webpack_require__(216);
 
 var _reactRedux = __webpack_require__(9);
 
@@ -27374,13 +27396,13 @@ var mapStateToProps = function mapStateToProps(state) {
 exports.default = (0, _reactRedux.connect)(mapStateToProps)(BlogWorkSpace);
 
 /***/ }),
-/* 215 */
+/* 216 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(216);
+var content = __webpack_require__(217);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -27405,7 +27427,7 @@ if(false) {
 }
 
 /***/ }),
-/* 216 */
+/* 217 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(undefined);
@@ -27419,7 +27441,7 @@ exports.push([module.i, ".add-blog-workspace {\n  position: absolute;\n  width: 
 
 
 /***/ }),
-/* 217 */
+/* 218 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27541,13 +27563,13 @@ var Scroll = function (_Component) {
 exports.default = Scroll;
 
 /***/ }),
-/* 218 */
+/* 219 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(219);
+var content = __webpack_require__(220);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -27572,7 +27594,7 @@ if(false) {
 }
 
 /***/ }),
-/* 219 */
+/* 220 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(undefined);
@@ -27586,13 +27608,13 @@ exports.push([module.i, ".blog-admin {\n  background: #F0F2F5;\n}\n\n.blog-admin
 
 
 /***/ }),
-/* 220 */
+/* 221 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(221);
+var content = __webpack_require__(222);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -27617,7 +27639,7 @@ if(false) {
 }
 
 /***/ }),
-/* 221 */
+/* 222 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(undefined);

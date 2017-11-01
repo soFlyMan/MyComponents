@@ -74,8 +74,9 @@ class Blog extends Component {
           <ul className="blog-nav-option">
             <li><span onClick={this.handleToggle.bind(this)}>{isBlogToggled?'LIST':'FULLSCREEN'}</span></li>
             <Link to="/home"><li>HOME</li></Link>
-            <li>PROTFLIO</li>
-            <li>TAGS</li>
+            <Link to="/blog/all"><li>ALL</li></Link>
+            <Link to="/protflio"><li>PROTFLIO</li></Link>
+            <Link to="/protflio"><li>TAGS</li></Link>
           </ul>
         </div>
 

@@ -1,0 +1,64 @@
+$input-width: 560px;
+$ml: 44px;
+$title-height: 36px;
+$body-height: 600px;
+
+.add-blog-title {
+  position: relative;
+  label {
+    display: inline-block;
+    font-size: 24px;
+    width: $ml;
+  }
+  input {
+    width: $input-width;
+    height: $title-height;
+    font-size: 24px;
+    outline: none;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+  }
+  h1 {
+    position: absolute;
+    top: -12px;
+    left: $input-width + $ml + 12;
+    height: $title-height;
+    width: 400px;
+    line-height: $title-height;
+    color: #3a3a3a;
+    font-style: italic;
+  }
+}
+
+.add-blog-input {
+  position: relative;
+  // width: $input-width * 2 + 120;
+  height: auto;
+}
+.add-blog-body {
+  display: inline-block;
+  textarea {
+    height: $body-height;
+    width: $input-width;
+    font-size: 24px;
+    margin-left: $ml;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    background: #272822;
+    color: #f8f8f2;
+    outline: none;
+  }
+}
+
+.previewer {
+  position: absolute;
+  left: $input-width + $ml + 4;
+  display: inline-block;
+  height: $body-height + 6;
+  width: $input-width;
+  padding-left: 8px;
+  border: 1px solid #ccc;
+  box-shadow: inset 2px 1px 3px #ddd;
+  overflow: scroll;
+  background: #fff;
+}

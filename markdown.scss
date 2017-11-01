@@ -6,9 +6,26 @@ h5,
 h6,
 p,
 blockquote {
-    margin: 0;
+    margin: 12px 0;
     padding: 0;
 }
+
+.md {
+  p {
+      margin: 30px;
+      font-size: 18px;
+      line-height: 24px;
+  }
+  blockquote {
+    margin: 12px 0;
+    padding: 10px;
+
+    p {
+      margin: 4px;
+    }
+  }
+}
+
 // body {
 //     font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
 //     font-size: 13px;
@@ -39,9 +56,7 @@ a:hover {
 a img {
     border: none;
 }
-p {
-    margin-bottom: 9px;
-}
+
 h1,
 h2,
 h3,
@@ -76,25 +91,35 @@ hr {
     border-bottom: 1px solid #ccc;
 }
 blockquote {
-    padding: 13px 13px 21px 15px;
-    margin-bottom: 18px;
-    font-family:georgia,serif;
-    font-style: italic;
+  color: gray;
+  font-style: italic;
+  font-size: .95em;
+  margin: 20px 0 20px;
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 17.5px;
+  border-left: 5px solid #eee;
 }
-blockquote:before {
-    content:"\201C";
-    font-size:40px;
-    margin-left:-10px;
-    font-family:georgia,serif;
-    color:#eee;
-}
-blockquote p {
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 18px;
-    margin-bottom: 0;
-    font-style: italic;
-}
+// blockquote {
+//     padding: 13px 13px 21px 15px;
+//     margin-bottom: 18px;
+//     font-family:georgia,serif;
+//     font-style: italic;
+// }
+// blockquote:before {
+//     content:"\201C";
+//     font-size:40px;
+//     margin-left:-10px;
+//     font-family:georgia,serif;
+//     color:#eee;
+// }
+// blockquote p {
+//     font-size: 14px;
+//     font-weight: 300;
+//     line-height: 18px;
+//     margin-bottom: 0;
+//     font-style: italic;
+// }
 code, pre {
     font-family: Monaco, Andale Mono, Courier New, monospace;
 }

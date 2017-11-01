@@ -4,6 +4,7 @@ var Tag = require('../models/tag')
 
 router.prefix('/blog')
 
+
 router.get('/getAllBlogs', async function(ctx, next) {
   await Blog.find({}, function(err, blogs) {
     if(err) return err
@@ -40,7 +41,20 @@ router.get('/getAllTags', async function(ctx, next) {
   })
 })
 
+router.post('/addBlog', async function(ctx, next) {
+  const blog = new Blog(ctx.request.body)
+  console.log(blog)
+  await blog.save(function(err) {
+    if(err) return ctx.body = "error"
+    ctx.body = { data: 1 }
+  })
+})
+
 router.get('*', async function(ctx, next) {
+  ctx.state = {
+    title: 'soFly'
+  }
   await ctx.render('index')
 })
+
 module.exports = router

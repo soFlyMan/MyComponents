@@ -1,0 +1,137 @@
+$ws-width: 420px;
+$ws-height: 300px;
+.add-blog-workspace {
+  position: absolute;
+  width: $ws-width;
+  height: auto;
+  background: #ccc;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px 1px #ddd;
+
+  $nav-height: 30px;
+  .ws-nav {
+    width: $ws-width;
+    height: $nav-height;
+    line-height: $nav-height;
+    background: #e8eaed;
+
+    span {
+      margin-left: 8px;
+      cursor: pointer;
+    }
+  }
+  .ws-body {
+    position: relative;
+    width: $ws-width;
+    // height: 300px;
+    // padding: 12px;
+    border: 1px solid #ccc;
+    background: #f2f7ff;
+    transition: height .5s;
+    overflow: hidden;
+
+
+
+    $ws-button-width: 80px;
+    $ws-button-height: 30px;
+
+    .ws-addTag {
+      height: $ws-button-height;
+      margin-right: 12px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .ws-dropdown {
+      position: absolute;
+      top: 12px;
+      right: 56px;
+
+      &:hover ul {
+        transform: scaleY(1);
+      }
+
+      .ws-dropdown-btn {
+        height: $ws-button-height;
+        line-height: $ws-button-height;
+        cursor: pointer;
+        background: #4886e2;
+        text-align: center;
+        border-radius: 2px;
+        color: #fff;
+      }
+
+      ul {
+        transform-origin:top;
+        transform: scaleY(0);
+        transition: all .2s;
+        font-stretch:normal;
+        overflow: hidden;
+
+        li {
+          border: 1px solid #FFF;
+          font-size: 16px;
+          padding: 4px;
+          background: #7caaef;
+          cursor: pointer;
+
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .ws-button {
+      display: inline-block;
+      width: $ws-button-width;
+      height: $ws-button-height;
+      line-height: $ws-button-height;
+      font-family: inherit;
+      cursor: pointer;
+      background-color: #91d2ea;
+      text-align: center;
+      border-radius: 4px;
+      padding: 0;
+      color: #FFF;
+      border: none;
+      outline: none;
+      opacity: .8;
+
+      &:hover {
+        color: #333;
+        opacity: 1;
+      }
+    }
+    .ws-submit {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 6px, rgba(0, 0, 0, 0.24) 0px 1px 2px
+    }
+  }
+
+  .ws-tags {
+    li {
+      width: 100px;
+      height: 30px;
+      background: #19d1e5;
+      margin: 12px;
+      line-height: 30px;
+      padding: 0 6px;
+      box-shadow: 1px 1px 1px #ccc;
+      border-radius: 3px;
+
+      span {
+        float: right;
+        cursor: pointer;
+
+        &:hover {
+          font-weight: 700;
+          text-shadow: 1px 1px 1px #333;
+        }
+      }
+    }
+  }
+
+}

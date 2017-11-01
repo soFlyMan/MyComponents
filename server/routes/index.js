@@ -14,7 +14,7 @@ router.get('/', async function (ctx, next) {
   //         console.log('author saved')
   //       }
   //     })
-  await ctx.render('index')
+  await ctx.render('index', {})
 })
 
 router.get('/foo', async function (ctx, next) {

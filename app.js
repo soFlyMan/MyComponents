@@ -2,26 +2,32 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import test from './test.js'
 import log from './src/log.js'
-import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom'
+import { HashRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import createLogger from 'redux-logger'
 import reducer from './src/reducer.js'
+import { loadState, saveState } from './localStorage'
+
 import './reset.scss'
 import './markdown.scss'
-import NoMatch from './NoMatch.js'
 
+import NoMatch from './NoMatch.js'
 import Home from './src/Home.js'
 import Blog from './src/blog/Blog.js'
 import TimeManage from './src/TM/TimeManage.js'
 import Guide from './src/Guide/Guide.js'
+import Admin from './src/admin/Admin.js'
 
 
 
 const middleware = applyMiddleware(createLogger, thunkMiddleware)
 const store = createStore(reducer, middleware)
 
+store.subscribe(() => {
+  saveState(store.getState())
+})
 
 ReactDOM.render(
   <Provider store={store}>
@@ -35,6 +41,7 @@ ReactDOM.render(
           <Route path="/blog" component={Blog} />
           <Route path="/tm" component={TimeManage} />
           <Route path="/guide" component={Guide} />
+          <Route path="/admin" component={Admin} />
           <Route component={NoMatch}/>
         </Switch>
       </div>

@@ -1,0 +1,43 @@
+$sidebar-width: 240px;
+$top: 80px;
+
+.admin {
+  width: 100%;
+  height: 100%;
+  .admin-sidebar {
+    position: fixed;
+    height: 100%;
+    width: $sidebar-width;
+    padding-top: $top;
+    background-color: #404040;
+    
+    $option-height: 48px;
+    .admin-option {
+      width: $sidebar-width;
+      padding-left: 12px;
+      height: $option-height;
+      line-height: $option-height;
+      cursor: pointer;
+
+      &:hover .sidebar-name{
+        color: #f76d60;
+      }
+    }
+    .sidebar-name {
+      color: #efefef;
+    }
+    .admin-selected {
+      font-weight: bold;
+      .admin-option {
+        background: #F0F2F5;
+      }
+      .sidebar-name {
+        color: #f76d60;
+      }
+    }
+  }
+
+  .admin-content {
+    margin-left: $sidebar-width;
+  }
+}

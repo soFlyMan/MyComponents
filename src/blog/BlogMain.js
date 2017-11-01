@@ -1,10 +1,15 @@
 import React from 'react'
-import './BlogMain.scss'
-import Tag from '../ReactVersion/Tag/Tag.js'
-
-
+import PropTypes from 'prop-types'
 import ReactMarkdown from 'react-markdown'
 import { Route, Link, Redirect } from 'react-router-dom'
+import './BlogMain.scss'
+import './BlogMainToggle.scss'
+import Tag from '../ReactVersion/Tag/Tag.js'
+
+import BlogMainBody from './BlogMainBody.js'
+import BlogMainAll from './BlogMainAll.js'
+
+
 
 const BlogMain = ({ url, toggle, tags, isTag, blogs, handleTag }) => {
   var blogSide = toggle?'blog-sidebar-toggle':'blog-sidebar'
@@ -42,41 +47,20 @@ const BlogMain = ({ url, toggle, tags, isTag, blogs, handleTag }) => {
       <div className={blogArt}>
         <Route path={`${url}`} render={() => (
             <Redirect to={`${url}/all`} />
-          )}/>
-        <Route path={`${url}/all`} exact render={() => (
-          <div>all</div>
-          )}/>
-        <Route path={`${url}/body/:id`} render={props => {
-          if(blogs.length !== 0) {
-            var blog = blogs.find(val => {
-              return val._id == props.match.params.id
-            })
-            return (
-              <div>
-                <div className="blog-title">
-                  <ul className="blog-tags">
-                    <li>前端开发233</li>
-                    <li>JavaScript</li>
-                    <li>Life</li>
-                  </ul>
-                  <h1>Upgrading Ele.me to Progressive Web App</h1>
-                  <i>posted by soFly on Oct 12, 2017</i>
-                </div>
-                <div className="blog-body">
-                  <ReactMarkdown source={blog.body} />
-                  <blockquote>This blockquote will change based on the HTML settings above.</blockquote>
-                </div>
-              </div>
-            )
-            }
-            return (
-              <Redirect to="/blog/all" />
-            )
-          }
-        }/>
+        )}/>
+        <Route path={`${url}/all`} exact component={BlogMainAll}/>
+        <Route path={`${url}/body/:id`} component={BlogMainBody}/>
       </div>
     </div>
   )
+}
+
+BlogMain.propTypes = {
+  toogle: PropTypes.bool,
+  tags: PropTypes.array,
+  isTags: PropTypes.array,
+  blogs: PropTypes.array,
+  handleTag: PropTypes.func,
 }
 
 export default BlogMain

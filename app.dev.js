@@ -16,6 +16,7 @@ import Home from './src/Home.js'
 import Blog from './src/blog/Blog.js'
 import TimeManage from './src/TM/TimeManage.js'
 import Guide from './src/Guide/Guide.js'
+import Admin from './src/admin/Admin.js'
 
 
 
@@ -35,6 +36,7 @@ ReactDOM.render(
           <Route path="/blog" component={Blog} />
           <Route path="/tm" component={TimeManage} />
           <Route path="/guide" component={Guide} />
+          <Route path="/admin" component={Admin} />
           <Route component={NoMatch}/>
         </Switch>
       </div>

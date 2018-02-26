@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import './List.scss'
-import Button from '../../ReactVersion/Button/Button.js'
+import Button from '../../component/ReactVersion/Button/Button.js'
 
 class List extends Component {
   constructor(props) {

@@ -1,7 +1,7 @@
 var router = require('koa-router')()
 var Author  = require('../models/author.js')
 
-router.get('/', async function (ctx, next) {
+router.get('*', async function (ctx, next) {
   ctx.state = {
     title: 'soFy'
   }

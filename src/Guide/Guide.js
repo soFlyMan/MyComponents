@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Button from '../ReactVersion/Button/Button.js'
+import Button from '../component/ReactVersion/Button/Button.js'
 
 class Guide extends Component {
   render() {

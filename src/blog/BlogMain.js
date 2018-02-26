@@ -4,14 +4,15 @@ import ReactMarkdown from 'react-markdown'
 import { Route, Link, Redirect } from 'react-router-dom'
 import './BlogMain.scss'
 import './BlogMainToggle.scss'
-import Tag from '../ReactVersion/Tag/Tag.js'
+import Tag from '../component/ReactVersion/Tag/Tag.js'
 
 import BlogMainBody from './BlogMainBody.js'
 import BlogMainAll from './BlogMainAll.js'
+import { Spinner } from '../shared'
 
 
 
-const BlogMain = ({ url, toggle, tags, isTag, blogs, handleTag }) => {
+const BlogMain = ({ url, toggle, tags, isTag, blogs, handleTag, isFetching }) => {
   var blogSide = toggle?'blog-sidebar-toggle':'blog-sidebar'
   var blogArt = toggle?'blog-article-toggle':'blog-article'
   var input = '# This is a header\n\n## And this is a paragraph\n<blockquote>This blockquote will change based on the HTML settings above.</blockquote>'
@@ -19,7 +20,9 @@ const BlogMain = ({ url, toggle, tags, isTag, blogs, handleTag }) => {
     <div className="blog-body clearfix">
       <div className={blogSide}>
         <div className="blog-type blog-sidebar-public">
-          <ul>
+        {isFetching ? 
+          (<Spinner />) 
+          : (<ul>
           {
             tags.map(val => {
               return (
@@ -27,20 +30,30 @@ const BlogMain = ({ url, toggle, tags, isTag, blogs, handleTag }) => {
               )
             })
           }
-          </ul>
+          </ul>)
+        }
         </div>
         <div className="blog-list blog-sidebar-public">
           <div className="blog-list-option"><span>date</span><Link to={`${url}/all`}><span>All</span></Link><span>Technology</span></div>
-          <ul>
-            {
-              isTag.map(val => {
-                var date = val.meta.updateAt.toString().substring(0,10)
-                return (
-                  <li key={val._id}><span className="public-date">{date}&nbsp;&nbsp;</span><Link to={`${url}/body/${val._id}`}>{val.title}</Link></li>
-                )
-              })
-            }
-          </ul>
+          {isFetching ?
+            (<Spinner />)
+            : <ul>
+              {isTag.map(val => {
+                  var date = val
+                    .meta
+                    .updateAt
+                    .toString()
+                    .substring(0, 10)
+                  return (
+                    <li key={val._id}>
+                      <span className="public-date">{date}&nbsp;&nbsp;</span>
+                      <Link to={`${url}/body/${val._id}`}>{val.title}</Link>
+                    </li>
+                  )
+                })
+              }
+              </ul>
+          }
         </div>
         <div className="blog-mine blog-sidebar-public"></div>
       </div>

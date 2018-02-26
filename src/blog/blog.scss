@@ -75,9 +75,20 @@ a {
   font-weight: 600;
   cursor: default;
 }
+
+.nav-toggle {
+  display: none;
+  position: absolute;
+  right: 100px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+$list-font-size: 18px;
 .blog-nav-option {
   position: absolute;
-  right: 300px;
+  right: 240px;
+  top: $nav-height / 2 - $list-font-size / 2;
   font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
   color: #404040;
 
@@ -85,11 +96,34 @@ a {
     display: inline-block;
     cursor: pointer;
     margin-right: 24px;
-    font-size: 18px;
+    font-size: $list-font-size;
     font-weight: 700;
 
     &:hover {
       opacity: .6;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .nav-toggle {
+    display: inline-block;
+  }
+  .blog-nav-option {
+    position: absolute;
+    top: 60px;
+    padding-top: 4px;
+    left: 0;
+    width: 100%;
+    background: #93E1FF;
+    overflow: hidden;
+    @include transition(all .5s);
+
+    li {
+      display: block;
+      line-height: 56px;
+      padding-left: 120px;
+      border-bottom: 1px solid #FFF;
     }
   }
 }

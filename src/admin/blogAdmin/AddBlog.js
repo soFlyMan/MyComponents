@@ -30,7 +30,7 @@ class AddBlog extends Component {
   }
   onDeleteTag(tagName) {
     const { tags } = this.state
-    const t = tags.slice()
+    const t = [...tags]
     const i = t.indexOf(tagName)
     t.splice(i, 1)
     this.setState({

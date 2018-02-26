@@ -3,11 +3,11 @@ import './home.scss'
 import soFly from './soFly.jpg'
 import { Link } from 'react-router-dom'
 
-import NativeVersion from './NativeVersion/NativeVersion.js'
-import ReactVersion from './ReactVersion/ReactVersion.js'
-import ProcessLine from './ReactVersion/ProcessLine/ProcessLine.js'
+// import NativeVersion from './component/NativeVersion/NativeVersion.js'
+// import ReactVersion from './component/ReactVersion/ReactVersion.js'
+import ProcessLine from './component/ReactVersion/ProcessLine/ProcessLine.js'
 
-import HomeTag from './home/HomeTag/HomeTag.js'
+import HomeTag from './component/home/HomeTag/HomeTag.js'
 
 class Home extends Component {
   constructor(props) {
@@ -40,6 +40,7 @@ class Home extends Component {
               <Link to="/tm"><HomeTag name={"TM"} color={"#95FCF5"} /></Link>
               <Link to="/admin"><HomeTag name={"Components"} color={"#73B1E1"} /></Link>
               <Link to="/guide"><HomeTag name={"Guide"} color={"#73B1E1"} /></Link>
+              <Link to ="/corewords"> <HomeTag name={"CoreWords"} color={"#73B1E1"}/></Link>
             </div>
             <Link to="/">
               <div className="home-avater">
@@ -55,7 +56,7 @@ class Home extends Component {
         </div>
 
         <div className="home-page2">
-
+          <p>You can learning 7000 core words here!</p>
         </div>
 
         <div className="home-page3">

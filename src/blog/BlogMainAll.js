@@ -4,11 +4,13 @@ import ReactMarkdown from 'react-markdown'
 import { Link, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 
+import { Spinner } from '../shared'
+
 
 class BlogMainAll extends Component {
   render() {
-     const { blogs } = this.props
-     return (
+     const { blogs, isFetching } = this.props
+     return isFetching ? (<Spinner />) : (
          <ul className="blog-all blog-all-public">
            <li className="blog-all-desc">
              soFly's Blog
@@ -36,6 +38,7 @@ class BlogMainAll extends Component {
 
 const mapStateToProps = state => ({
   blogs: state.fetchingAllBlogs.data,
+  isFetching: state.fetchingAllBlogs.isFetching
 })
 
 BlogMainAll.propTypes = {

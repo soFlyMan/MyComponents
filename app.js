@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import test from './test.js'
 import log from './src/log.js'
-import { HashRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import thunkMiddleware from 'redux-thunk'
@@ -13,12 +13,13 @@ import { loadState, saveState } from './localStorage'
 import './reset.scss'
 import './markdown.scss'
 
-import NoMatch from './NoMatch.js'
-import Home from './src/Home.js'
-import Blog from './src/blog/Blog.js'
-import TimeManage from './src/TM/TimeManage.js'
-import Guide from './src/Guide/Guide.js'
-import Admin from './src/admin/Admin.js'
+import NoMatch from './NoMatch'
+import Home from './src/Home'
+import Blog from './src/blog/Blog'
+import TimeManage from './src/TM/TimeManage'
+import Guide from './src/Guide/Guide'
+import Admin from './src/admin/Admin'
+import CoreWords from './src/words/CoreWords'
 
 
 
@@ -42,6 +43,7 @@ ReactDOM.render(
           <Route path="/tm" component={TimeManage} />
           <Route path="/guide" component={Guide} />
           <Route path="/admin" component={Admin} />
+          <Route path = "/corewords" component={CoreWords} />
           <Route component={NoMatch}/>
         </Switch>
       </div>

@@ -11,19 +11,21 @@ blockquote {
 }
 
 .md {
-  p {
-      margin: 30px;
-      font-size: 18px;
-      line-height: 24px;
-  }
-  blockquote {
-    margin: 12px 0;
-    padding: 10px;
-
     p {
-      margin: 4px;
+        font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
+        margin: 30px;
+        font-size: 21px;
+        line-height: 1.58;
+        font-weight: 400;
+        letter-spacing: -.003em;
     }
-  }
+    blockquote {
+        margin: 12px 0;
+        padding: 10px;
+        p {
+            margin: 4px;
+        }
+    }
 }
 
 // body {
@@ -38,10 +40,13 @@ table {
     margin: 10px 0 15px 0;
     border-collapse: collapse;
 }
-td,th {
+
+td,
+th {
     border: 1px solid #ddd;
     padding: 3px 10px;
 }
+
 th {
     padding: 5px 10px;
 }
@@ -49,10 +54,12 @@ th {
 a {
     color: #0069d6;
 }
+
 a:hover {
     color: #0050a3;
     text-decoration: none;
 }
+
 a img {
     border: none;
 }
@@ -66,40 +73,49 @@ h6 {
     color: #404040;
     line-height: 36px;
 }
+
 h1 {
     margin-bottom: 18px;
     font-size: 30px;
 }
+
 h2 {
     font-size: 24px;
 }
+
 h3 {
     font-size: 18px;
 }
+
 h4 {
     font-size: 16px;
 }
+
 h5 {
     font-size: 14px;
 }
+
 h6 {
     font-size: 13px;
 }
+
 hr {
     margin: 0 0 19px;
     border: 0;
     border-bottom: 1px solid #ccc;
 }
+
 blockquote {
-  color: gray;
-  font-style: italic;
-  font-size: .95em;
-  margin: 20px 0 20px;
-  padding: 10px 20px;
-  margin: 0 0 20px;
-  font-size: 17.5px;
-  border-left: 5px solid #eee;
+    color: gray;
+    font-style: italic;
+    font-size: .95em;
+    margin: 20px 0 20px;
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 17.5px;
+    border-left: 5px solid #eee;
 }
+
 // blockquote {
 //     padding: 13px 13px 21px 15px;
 //     margin-bottom: 18px;
@@ -120,9 +136,11 @@ blockquote {
 //     margin-bottom: 0;
 //     font-style: italic;
 // }
-code, pre {
+code,
+pre {
     font-family: Monaco, Andale Mono, Courier New, monospace;
 }
+
 code {
     background-color: #fee9cc;
     color: rgba(0, 0, 0, 0.75);
@@ -132,6 +150,7 @@ code {
     -moz-border-radius: 3px;
     border-radius: 3px;
 }
+
 pre {
     display: block;
     padding: 14px;
@@ -142,31 +161,45 @@ pre {
     white-space: pre-wrap;
     word-wrap: break-word;
 }
+
 pre code {
     background-color: #fff;
-    color:#737373;
+    color: #737373;
     font-size: 11px;
     padding: 0;
 }
+
 sup {
     font-size: 0.83em;
     vertical-align: super;
     line-height: 0;
 }
+
 * {
     -webkit-print-color-adjust: exact;
 }
+
 @media screen and (min-width: 914px) {
     body {
         width: 854px;
-        margin:0 auto;
+        margin: 0 auto;
     }
 }
+
 @media print {
-    body,code,pre code,h1,h2,h3,h4,h5,h6 {
+    body,
+    code,
+    pre code,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         color: black;
     }
-    table, pre {
+    table,
+    pre {
         page-break-inside: avoid;
     }
 }

@@ -4,7 +4,7 @@ import { Route, Link } from 'react-router-dom'
 import './blog.scss'
 import { toggleBlog } from './actions/blogStyle.js'
 
-import ProgressLine from '../ReactVersion/ProcessLine/ProcessLine.js'
+import ProgressLine from '../component/ReactVersion/ProcessLine/ProcessLine.js'
 import BlogMain from './BlogMain.js'
 import BlogList from './BlogList.js'
 
@@ -19,6 +19,7 @@ class Blog extends Component {
       blogNav: "blog-nav",
       top: 60,
       toggle: props.isBlogToggled,
+      isNavToggled: false,
     }
   }
   componentDidMount() {
@@ -48,9 +49,16 @@ class Blog extends Component {
     dispatch(getBlogsByTag(tagName))
     dispatch(handleActive(tagName))
   }
+  toggleNavList() {
+    const { isNavToggled } = this.state
+    this.setState({
+      isNavToggled: !isNavToggled
+    })
+  }
   render() {
     var { url } = this.props.match
-    const { isBlogToggled, tags, blogs, isTag} = this.props
+    const { isNavToggled } = this.state
+    const { isBlogToggled, tags, blogs, isTag, isFetching } = this.props
     var toggleStyle = isBlogToggled?{
           backgroundColor: '#FFF',
           opacity: .9
@@ -61,7 +69,16 @@ class Blog extends Component {
       tags,
       isTag: isTag,
       blogs,
+      isFetching
     }
+    const listStyle = {
+      height: 285,
+    }
+    var listStyleToggle = {
+      height: 0,
+      paddingTop: 0,
+    }
+
     return (
       <div className="blog clearfix" onWheel={this.toggleNav.bind(this)}>
         <div className={this.state.blogNav}  style={toggleStyle}>
@@ -71,8 +88,9 @@ class Blog extends Component {
           </div>
           </Link>
           <Link to="/blog/all"><span className="blog-name">soFly's Blog</span></Link>
-          <ul className="blog-nav-option">
-            <li><span onClick={this.handleToggle.bind(this)}>{isBlogToggled?'LIST':'FULLSCREEN'}</span></li>
+          <span className="nav-toggle" onClick={this.toggleNavList.bind(this)}>TOGGLE</span>
+          <ul className="blog-nav-option" style={isNavToggled?listStyle:listStyleToggle}>
+            <li><span onClick={this.handleToggle.bind(this)}>{isBlogToggled?'PREVIEW':'FULLSCREEN'}</span></li>
             <Link to="/home"><li>HOME</li></Link>
             <Link to="/blog/all"><li>ALL</li></Link>
             <Link to="/protflio"><li>PROTFLIO</li></Link>
@@ -92,6 +110,7 @@ const mapStateToProps = state => ({
   isBlogToggled: state.isBlogToggled.toggle,
   tags: state.fetchingAllTags.data,
   blogs: state.fetchingAllBlogs.data,
+  isFetching: state.fetchingAllBlogs.isFetching,
   isTag: state.fetchingAllBlogs.isTag,
 })
 

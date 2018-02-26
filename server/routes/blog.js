@@ -8,7 +8,8 @@ router.prefix('/blog')
 router.get('/getAllBlogs', async function(ctx, next) {
   await Blog.find({}, function(err, blogs) {
     if(err) return err
-    return ctx.body = blogs
+    console.log(blogs)
+    return ctx.body = blogs.reverse()
   })
 })
 router.get('/getBlogs', async function(ctx, next) {

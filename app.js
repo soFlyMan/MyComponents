@@ -13,7 +13,7 @@ import { loadState, saveState } from './localStorage'
 import './reset.scss'
 import './markdown.scss'
 
-import NoMatch from './NoMatch'
+import NoMatch from './nomatch/NoMatch'
 import Home from './src/Home'
 import Blog from './src/blog/Blog'
 import TimeManage from './src/TM/TimeManage'
@@ -40,10 +40,10 @@ ReactDOM.render(
         <Switch>
           <Route path="/home" component={Home} />
           <Route path="/blog" component={Blog} />
-          <Route path="/tm" component={TimeManage} />
-          <Route path="/guide" component={Guide} />
+          <Route exact path="/tm" component={TimeManage} />
+          <Route exact path="/guide" component={Guide} />
           <Route path="/admin" component={Admin} />
-          <Route path = "/corewords" component={CoreWords} />
+          <Route exact path = "/corewords" component={CoreWords} />
           <Route component={NoMatch}/>
         </Switch>
       </div>

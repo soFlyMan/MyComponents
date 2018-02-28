@@ -1,0 +1,29 @@
+.nomatch-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: .6;
+    z-index: -1;
+}
+
+.nomatch-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 36px;
+    color: #666;
+    width: 1200px;
+    text-align: center;
+    text-indent: 2em;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.nomatch-link {
+    color: #3A99D8;
+    opacity: .9;
+
+    &:hover {
+        text-decoration-line: underline;
+        opacity: 1;
+    }
+}

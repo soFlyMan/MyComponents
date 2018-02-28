@@ -11,7 +11,7 @@ class AddBlog extends Component {
       body: '',
       title: '',
       tag: '',
-      tags: ['Life', 'technology'],
+      tags: ['life', 'technology'],
     }
   }
   addTag(tagName) {

@@ -1,23 +1,51 @@
 .RV-tag {
-  display: inline-block;
-  border-radius: 12px;
-  padding: 4px 12px;
-  margin-right: 12px;
-  cursor: pointer;
-  // background-color: rgb(156, 178, 225);
-  background-color: #b3e7f9;
+    display: inline-block;
+    border-radius: 12px;
+    padding: 4px 12px;
+    margin-right: 12px;
+    cursor: pointer; // background-color: rgb(156, 178, 225);
+    background-color: #b3e7f9;
+    &:hover {
+        color: #FFF;
+        background-color: rgb(0, 133, 161);
+    }
+}
 
-  &:hover {
+.RV-tag-active {
+    display: inline-block;
+    border-radius: 12px;
+    padding: 4px 12px;
+    margin-right: 12px;
+    cursor: pointer;
     color: #FFF;
     background-color: rgb(0, 133, 161);
-  }
 }
-.RV-tag-active {
-  display: inline-block;
-  border-radius: 12px;
-  padding: 4px 12px;
-  margin-right: 12px;
-  cursor: pointer;
-  color: #FFF;
-  background-color: rgb(0, 133, 161);
+
+.tag-default, .tag-default-active {
+    font-size: 20px;
+    font-weight: 600;
+    height: 30px;
+    padding: 2px 14px;
+    margin-right: 12px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 4px;
+    margin-right: 4px;
+    cursor: pointer;
+  }
+  
+.tag-default {
+    background-color: #dbe6ec;
+    color: #2c3643;
+    &:hover {
+        opacity: .6;
+    }
+}
+
+.tag-default-active {
+    color: #FFF;
+    background-color: #2c3643;
+    &:hover {
+        opacity: 1;
+    }
 }

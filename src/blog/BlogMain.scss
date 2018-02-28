@@ -36,11 +36,13 @@ $padding: 85px;
       word-break: break-all;
     }
     .blog-type {
-      height: 96px;
+      min-height: 96px;
       overflow: scroll;
       ul {
         li {
           display: inline-block;
+          margin-right: 8px;
+          
 
           p {
             font-size: 16px;

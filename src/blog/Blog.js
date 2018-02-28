@@ -8,7 +8,7 @@ import ProgressLine from '../component/ReactVersion/ProcessLine/ProcessLine.js'
 import BlogMain from './BlogMain.js'
 import BlogList from './BlogList.js'
 
-import { fetchAllTags, fetchAllBlogs, getBlogsByTag, handleActive } from './actions/fetch.js'
+import { fetchAllTags, fetchAllBlogs, getBlogsByTag, getAllByTag, handleActive } from './actions/fetch.js'
 
 import soFly from '../soFly.jpg'
 
@@ -21,6 +21,8 @@ class Blog extends Component {
       toggle: props.isBlogToggled,
       isNavToggled: false,
     }
+    this.handleTag = this.handleTag.bind(this)
+    this.handleAllByTag = this.handleAllByTag.bind(this)
   }
   componentDidMount() {
     const { dispatch } = this.props
@@ -49,6 +51,10 @@ class Blog extends Component {
     dispatch(getBlogsByTag(tagName))
     dispatch(handleActive(tagName))
   }
+  handleAllByTag() {
+    const { dispatch } = this.props
+    dispatch(getAllByTag())
+  }
   toggleNavList() {
     const { isNavToggled } = this.state
     this.setState({
@@ -58,7 +64,14 @@ class Blog extends Component {
   render() {
     var { url } = this.props.match
     const { isNavToggled } = this.state
-    const { isBlogToggled, tags, blogs, isTag, isFetching } = this.props
+    const {
+      isBlogToggled,
+      tags,
+      blogs,
+      isTag,
+      isFetching,
+      isAllActive
+    } = this.props
     var toggleStyle = isBlogToggled?{
           backgroundColor: '#FFF',
           opacity: .9
@@ -69,7 +82,8 @@ class Blog extends Component {
       tags,
       isTag: isTag,
       blogs,
-      isFetching
+      isFetching,
+      isAllActive
     }
     const listStyle = {
       height: 285,
@@ -100,7 +114,7 @@ class Blog extends Component {
 
         <ProgressLine color={"#afffc2"} top={this.state.top} transition={"top 1s"} display={isBlogToggled}/>
 
-          <BlogMain {...blogMainProps} handleTag={this.handleTag.bind(this)}/>
+          <BlogMain {...blogMainProps} handleTag={this.handleTag} handleAllByTag={this.handleAllByTag}/>
       </div>
     )
   }
@@ -112,6 +126,7 @@ const mapStateToProps = state => ({
   blogs: state.fetchingAllBlogs.data,
   isFetching: state.fetchingAllBlogs.isFetching,
   isTag: state.fetchingAllBlogs.isTag,
+  isAllActive: state.fetchingAllTags.isAllActive,
 })
 
 export default connect(mapStateToProps)(Blog)

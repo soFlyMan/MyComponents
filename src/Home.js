@@ -36,11 +36,11 @@ class Home extends Component {
             <div className="home-layer"></div>
             <div className="home-tag">
               <Link to="/blog"><HomeTag name={"Blog"}/></Link>
-              <Link to="/test"><HomeTag name={"Portfolio"} color={"#E3C4F7"} /></Link>
-              <Link to="/tm"><HomeTag name={"TM"} color={"#95FCF5"} /></Link>
-              <Link to="/admin"><HomeTag name={"Components"} color={"#73B1E1"} /></Link>
-              <Link to="/guide"><HomeTag name={"Guide"} color={"#73B1E1"} /></Link>
-              <Link to ="/corewords"> <HomeTag name={"CoreWords"} color={"#73B1E1"}/></Link>
+              <Link to="/portfolio/test"><HomeTag name={"Portfolio"} color={"#E3C4F7"} /></Link>
+              <Link to="/tm/test"><HomeTag name={"TM"} color={"#95FCF5"} /></Link>
+              <Link to="/admin/test"><HomeTag name={"Components"} color={"#73B1E1"} /></Link>
+              <Link to="/guide/test"><HomeTag name={"Guide"} color={"#73B1E1"} /></Link>
+              <Link to ="/corewords/test"> <HomeTag name={"CoreWords"} color={"#73B1E1"}/></Link>
             </div>
             <Link to="/">
               <div className="home-avater">

@@ -7,6 +7,7 @@ export const FETCH_ALL_BLOGS = 'FETCH_ALL_BLOG',
              FETCH_ALL_BLOGS_ERR = 'FETCH_ALL_BLOGS_ERR'
 
 export const GET_BLOGS_BY_TAG = 'GET_BLOGS_BY_TAG'
+export const GET_ALL_BY_TAG = 'GET_ALL_BY_TAG'
 
 export const HANDLE_ACTIVE = 'HANDLE_ACTIVE'
 
@@ -39,6 +40,10 @@ export const fetchAllBlogs = (url, params) => {
 export const getBlogsByTag = (tagName) => ({
     type: GET_BLOGS_BY_TAG,
     tagName
+})
+
+export const getAllByTag = () => ({
+  type: GET_ALL_BY_TAG
 })
 
 export const handleActive = (tagName) => ({

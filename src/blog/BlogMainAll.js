@@ -6,8 +6,14 @@ import { connect } from 'react-redux'
 
 import { Spinner } from '../shared'
 
+import { getAllByTag } from './actions/fetch'
+
 
 class BlogMainAll extends Component {
+  componentDidMount() {
+    const { dispatch } = this.props
+    dispatch(getAllByTag())
+  }
   render() {
      const { blogs, isFetching } = this.props
      return isFetching ? (<Spinner />) : (

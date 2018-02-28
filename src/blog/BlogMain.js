@@ -12,7 +12,7 @@ import { Spinner } from '../shared'
 
 
 
-const BlogMain = ({ url, toggle, tags, isTag, blogs, handleTag, isFetching }) => {
+const BlogMain = ({ url, toggle, tags, isTag, blogs, handleTag, handleAllByTag, isFetching, isAllActive }) => {
   var blogSide = toggle?'blog-sidebar-toggle':'blog-sidebar'
   var blogArt = toggle?'blog-article-toggle':'blog-article'
   var input = '# This is a header\n\n## And this is a paragraph\n<blockquote>This blockquote will change based on the HTML settings above.</blockquote>'
@@ -23,6 +23,7 @@ const BlogMain = ({ url, toggle, tags, isTag, blogs, handleTag, isFetching }) =>
         {isFetching ? 
           (<Spinner />) 
           : (<ul>
+          <li onClick={handleAllByTag}><Tag active={isAllActive}>All</Tag></li>
           {
             tags.map(val => {
               return (
@@ -74,6 +75,7 @@ BlogMain.propTypes = {
   isTags: PropTypes.array,
   blogs: PropTypes.array,
   handleTag: PropTypes.func,
+  handleAllByTAg: PropTypes.func
 }
 
 export default BlogMain

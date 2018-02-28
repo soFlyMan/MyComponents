@@ -1,11 +1,12 @@
 import { FETCH_ALL_TAGS, FETCHED_ALL_TAGS, FETCH_ALL_TAGS_ERR, HANDLE_ACTIVE,
-         FETCH_ALL_BLOGS, FETCHED_ALL_BLOGS, FETCH_ALL_BLOGS_ERR, GET_BLOGS_BY_TAG  } from '../actions/fetch.js'
+         FETCH_ALL_BLOGS, FETCHED_ALL_BLOGS, FETCH_ALL_BLOGS_ERR, GET_BLOGS_BY_TAG, GET_ALL_BY_TAG  } from '../actions/fetch.js'
 
 const tagState = {
   isFetching: false,
   isFetched: false,
-  err: null,
+  isAllActive: true,
   data: [],
+  err: null,
 }
 export const fetchingAllTags = (state = tagState, action) => {
   switch(action.type) {
@@ -17,6 +18,7 @@ export const fetchingAllTags = (state = tagState, action) => {
       }
     case FETCHED_ALL_TAGS:
       return {
+        ...state,
         isFetching: false,
         isFetched: true,
         data: action.payload.map(val => {
@@ -35,11 +37,21 @@ export const fetchingAllTags = (state = tagState, action) => {
     case HANDLE_ACTIVE:
       return {
         ...state,
+        isAllActive: false,
         data: state.data.map(val => {
           val.active = false
           if(val.name == action.tagName) {
             val.active = true
           }
+          return val
+        })
+      }
+    case GET_ALL_BY_TAG:
+      return {
+        ...state,
+        isAllActive: true,
+        data: state.data.map(val => {
+          val.active = false
           return val
         })
       }
@@ -88,6 +100,11 @@ export const fetchingAllBlogs = (state = allBlogs, action) => {
           })
           return hasTag.length !== 0
         })
+      }
+    case GET_ALL_BY_TAG:
+      return {
+        ...state,
+        isTag: state.data
       }
     default:
       return state

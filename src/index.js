@@ -1,25 +1,23 @@
-import React, { Component } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
-import test from './test.js'
-import log from './src/log.js'
-import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import createLogger from 'redux-logger'
-import reducer from './src/reducer.js'
+import reducer from './reducer'
 import { loadState, saveState } from './localStorage'
 
 import './reset.scss'
 import './markdown.scss'
 
 import NoMatch from './nomatch/NoMatch'
-import Home from './src/Home'
-import Blog from './src/blog/Blog'
-import TimeManage from './src/TM/TimeManage'
-import Guide from './src/Guide/Guide'
-import Admin from './src/admin/Admin'
-import CoreWords from './src/words/CoreWords'
+import Home from './Home'
+import Blog from './blog/Blog'
+import TimeManage from './TM/TimeManage'
+import Guide from './Guide/Guide'
+// import Admin from './admin/AdminLogin'
+import CoreWords from './words/CoreWords'
 
 
 
@@ -42,7 +40,6 @@ ReactDOM.render(
           <Route path="/blog" component={Blog} />
           <Route exact path="/tm" component={TimeManage} />
           <Route exact path="/guide" component={Guide} />
-          <Route path="/admin" component={Admin} />
           <Route exact path = "/corewords" component={CoreWords} />
           <Route component={NoMatch}/>
         </Switch>

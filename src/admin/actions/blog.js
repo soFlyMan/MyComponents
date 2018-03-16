@@ -7,7 +7,7 @@ export const addBlog = (url, params) => {
     dispatch({ type: ADD_NEW_BLOG })
     return fetch(url, params).then(res => {
       res.json().then(data => {
-        dispatch({ type: ADDED_NEW_BLOG, payload: status })
+        dispatch({ type: ADDED_NEW_BLOG, payload: data })
       }).catch(err => {
         dispatch({ type: ADD_NEW_BLOG_ERR, payload: err})
       })

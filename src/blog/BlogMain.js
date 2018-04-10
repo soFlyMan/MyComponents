@@ -1,9 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import ReactMarkdown from 'react-markdown'
 import { Route, Link, Redirect } from 'react-router-dom'
-import './BlogMain.scss'
-import './BlogMainToggle.scss'
+import './fullscreen.scss'
+import './preview.scss'
 import Tag from '../component/ReactVersion/Tag/Tag.js'
 
 import BlogMainBody from './BlogMainBody.js'
@@ -13,29 +12,33 @@ import { Spinner } from '../shared'
 
 
 const BlogMain = ({ url, toggle, tags, isTag, blogs, handleTag, handleAllByTag, isFetching, isAllActive }) => {
-  var blogSide = toggle?'blog-sidebar-toggle':'blog-sidebar'
-  var blogArt = toggle?'blog-article-toggle':'blog-article'
-  var input = '# This is a header\n\n## And this is a paragraph\n<blockquote>This blockquote will change based on the HTML settings above.</blockquote>'
+  // const blogSide = toggle?'blog-sidebar-toggle':''
+  const blogStyle = toggle ? 'fullscreen' : 'preview'
+  const background = require('./images/Alice1-min.png')
   return (
-    <div className="blog-body clearfix">
-      <div className={blogSide}>
+    <div className={blogStyle}>
+    {/* 背景 */}
+      <img className="blog-background" src={toggle ? background : ''} alt="" />
+      {/* 标签栏 */}
+      <div className="blog-sidebar">
         <div className="blog-type blog-sidebar-public">
         {isFetching ? 
           (<Spinner />) 
           : (<ul>
-          <li onClick={handleAllByTag}><Tag active={isAllActive}>All</Tag></li>
+          <Link to="/blog/all"><li onClick={handleAllByTag}><Tag active={isAllActive} type={blogStyle}>All</Tag></li></Link>
           {
             tags.map(val => {
               return (
-                <li key={val._id} onClick={() => handleTag(val.name)}><Tag active={val.active}>{val.name}</Tag></li>
+                <li key={val._id} onClick={() => handleTag(val.name)}><Tag active={val.active} type={blogStyle}>{val.name}</Tag></li>
               )
             })
           }
           </ul>)
         }
         </div>
+        {/* blog列表 */}
         <div className="blog-list blog-sidebar-public">
-          <div className="blog-list-option"><span>date</span><Link to={`${url}/all`}><span>All</span></Link><span>Technology</span></div>
+          <div className="blog-list-option"><span>DATE</span><span>TITLE</span></div>
           {isFetching ?
             (<Spinner />)
             : <ul>
@@ -58,7 +61,8 @@ const BlogMain = ({ url, toggle, tags, isTag, blogs, handleTag, handleAllByTag, 
         </div>
         <div className="blog-mine blog-sidebar-public"></div>
       </div>
-      <div className={blogArt}>
+      {/* 文章主体 */}
+      <div className="blog-article">
         <Route path={`${url}`} render={() => (
             <Redirect to={`${url}/all`} />
         )}/>

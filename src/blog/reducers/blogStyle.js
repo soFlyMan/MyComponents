@@ -1,10 +1,13 @@
 import { TOGGLE_BLOG }  from '../actions/blogStyle.js'
 
-export const isBlogToggled = (state={ toogle: false }, action) => {
+const initialState = {
+  toggle: true
+}
+export const isBlogToggled = (state = initialState, action) => {
   switch(action.type) {
     case TOGGLE_BLOG:
       return {
-        toggle: action.payload
+        toggle: !state.toggle
       }
     default:
       return state

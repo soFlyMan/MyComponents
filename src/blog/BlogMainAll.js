@@ -24,7 +24,7 @@ class BlogMainAll extends Component {
            </li>
            {
              blogs.map(val => {
-             var body = val.body.substring(0, 240)
+             var body = val.body.substring(0, 240).replace(/>|#+/g, '')
              var date = val.meta.updateAt.substring(0, 10)
              return (
                  <Link to={`/blog/body/${val._id}`}  key={val._id}>

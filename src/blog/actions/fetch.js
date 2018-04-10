@@ -14,26 +14,24 @@ export const HANDLE_ACTIVE = 'HANDLE_ACTIVE'
 export const fetchAllTags = (url, params) => {
   return dispatch => {
     dispatch({ type: FETCH_ALL_TAGS })
-    return fetch(url, params).then(res => {
+    return fetch(url, params).then(res => 
       res.json().then(data => {
         dispatch({ type: FETCHED_ALL_TAGS, payload: data })
-      }).catch(err => {
-        dispatch({ type: FETCH_ALL_TAGS_ERR, payload: err})
+      })).catch(err => {
+        dispatch({ type: FETCH_ALL_TAGS_ERR, payload: err })
       })
-    })
   }
 }
 
 export const fetchAllBlogs = (url, params) => {
   return dispatch => {
     dispatch({ type: FETCH_ALL_BLOGS })
-    return fetch(url, params).then(res => {
+    return fetch(url, params).then(res => 
       res.json().then(data => {
         dispatch({ type: FETCHED_ALL_BLOGS, payload: data })
-      }).catch(err => {
-        dispatch({ type: FETCH_ALL_BLOGS_ERR, payload: err})
+      })).catch(err => {
+        dispatch({ type: FETCH_ALL_BLOGS_ERR, payload: err })
       })
-    })
   }
 }
 

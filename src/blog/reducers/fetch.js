@@ -64,7 +64,162 @@ const allBlogs = {
   isFetching: false,
   isFetched: false,
   err: null,
-  data: [],
+  data: // 20180325024024
+    // http://localhost:8080/blog/getAllBlogs
+
+    [
+      {
+        "_id": "5a94302b0842f610558c8d33",
+        "title": "new blog",
+        "body": "> Screw it!!!",
+        "__v": 0,
+        "comments": [
+
+        ],
+        "meta": {
+          "pv": 0,
+          "updateAt": "2018-02-26T16:04:02.394Z",
+          "createAt": "2018-02-26T16:04:02.394Z"
+        },
+        "tag": [
+          {
+            "name": "Life",
+            "_id": "5a94302b0842f610558c8d35"
+          },
+          {
+            "name": "technology",
+            "_id": "5a94302b0842f610558c8d34"
+          }
+        ],
+        "author": "soFly"
+      },
+      {
+        "_id": "5a92526cbfbd6307aea87fcb",
+        "title": "A new life?",
+        "body": "# what's life?\n\nCan someone tell me what does life mean? Go to school, and then work, then get married. Maybe it described most of people's whole life.\n\nBut it's not suitable for me.",
+        "__v": 0,
+        "comments": [
+
+        ],
+        "meta": {
+          "pv": 0,
+          "updateAt": "2018-02-25T06:00:47.831Z",
+          "createAt": "2018-02-25T06:00:47.831Z"
+        },
+        "tag": [
+          {
+            "name": "life",
+            "_id": "5a92526cbfbd6307aea87fcc"
+          }
+        ],
+        "author": "soFly"
+      },
+      {
+        "_id": "5a92526cbfbd6307aea87fcb",
+        "title": "A new life?",
+        "body": "# what's life?\n\nCan someone tell me what does life mean? Go to school, and then work, then get married. Maybe it described most of people's whole life.\n\nBut it's not suitable for me.",
+        "__v": 0,
+        "comments": [
+
+        ],
+        "meta": {
+          "pv": 0,
+          "updateAt": "2018-02-25T06:00:47.831Z",
+          "createAt": "2018-02-25T06:00:47.831Z"
+        },
+        "tag": [
+          {
+            "name": "life",
+            "_id": "5a92526cbfbd6307aea87fcc"
+          }
+        ],
+        "author": "soFly"
+      },
+      {
+        "_id": "5a92526cbfbd6307aea87fcb",
+        "title": "A new life?",
+        "body": "# what's life?\n\nCan someone tell me what does life mean? Go to school, and then work, then get married. Maybe it described most of people's whole life.\n\nBut it's not suitable for me.",
+        "__v": 0,
+        "comments": [
+
+        ],
+        "meta": {
+          "pv": 0,
+          "updateAt": "2018-02-25T06:00:47.831Z",
+          "createAt": "2018-02-25T06:00:47.831Z"
+        },
+        "tag": [
+          {
+            "name": "life",
+            "_id": "5a92526cbfbd6307aea87fcc"
+          }
+        ],
+        "author": "soFly"
+      },
+      {
+        "_id": "5a92526cbfbd6307aea87fcb",
+        "title": "A new life?",
+        "body": "# what's life?\n\nCan someone tell me what does life mean? Go to school, and then work, then get married. Maybe it described most of people's whole life.\n\nBut it's not suitable for me.",
+        "__v": 0,
+        "comments": [
+
+        ],
+        "meta": {
+          "pv": 0,
+          "updateAt": "2018-02-25T06:00:47.831Z",
+          "createAt": "2018-02-25T06:00:47.831Z"
+        },
+        "tag": [
+          {
+            "name": "life",
+            "_id": "5a92526cbfbd6307aea87fcc"
+          }
+        ],
+        "author": "soFly"
+      },
+      {
+        "_id": "5a92526cbfbd6307aea87fcb",
+        "title": "A new life?",
+        "body": "# what's life?\n\nCan someone tell me what does life mean? Go to school, and then work, then get married. Maybe it described most of people's whole life.\n\nBut it's not suitable for me.",
+        "__v": 0,
+        "comments": [
+
+        ],
+        "meta": {
+          "pv": 0,
+          "updateAt": "2018-02-25T06:00:47.831Z",
+          "createAt": "2018-02-25T06:00:47.831Z"
+        },
+        "tag": [
+          {
+            "name": "life",
+            "_id": "5a92526cbfbd6307aea87fcc"
+          }
+        ],
+        "author": "soFly"
+      },
+      {
+        "_id": "5a92526cbfbd6307aea87fcb",
+        "title": "A new life?",
+        "body": "# what's life?\n\nCan someone tell me what does life mean? Go to school, and then work, then get married. Maybe it described most of people's whole life.\n\nBut it's not suitable for me.",
+        "__v": 0,
+        "comments": [
+
+        ],
+        "meta": {
+          "pv": 0,
+          "updateAt": "2018-02-25T06:00:47.831Z",
+          "createAt": "2018-02-25T06:00:47.831Z"
+        },
+        "tag": [
+          {
+            "name": "life",
+            "_id": "5a92526cbfbd6307aea87fcc"
+          }
+        ],
+        "author": "soFly"
+      }
+    ],
   isTag: [],
 }
 export const fetchingAllBlogs = (state = allBlogs, action) => {

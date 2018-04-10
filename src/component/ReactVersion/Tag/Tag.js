@@ -2,11 +2,13 @@ import React from 'react'
 import './Tag.scss'
 
 const Tag = ({ children, active, type }) => {
-  const isActive = active?'RV-tag-active':'RV-tag'
-  const isDefault = active?'tag-default-active':'tag-default'
-  const tagType = type || isDefault
+  const tagType = {
+    default: active ? 'tag-default-active' : 'tag-default',
+    preview: active ? 'tag-default-active' : 'tag-default',
+    fullscreen: active ? 'tag-fullscreen-active' : 'tag-fullscreen'
+  }
   return (
-    <p className={tagType}>{children || 'tag'}</p>
+    <p className={tagType[type]}>{children || 'tag'}</p>
   )
 }
 

@@ -11,11 +11,11 @@ class BlogMainBody extends Component {
     console.log(this.props)
     if(blogs.length !== 0) {
       var blog = blogs.find(val => {
-        return val._id == match.params.id
+        return val._id === match.params.id
       })
       var date = blog.meta.updateAt.substring(0, 10)
       return (
-        <div>
+        <div className="blog-all">
           <div className="blog-title">
             <ul className="blog-tags">
               {blog.tag.map(val => {

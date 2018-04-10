@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './blog.scss'
 import { toggleBlog } from './actions/blogStyle.js'
 
 import ProgressLine from '../component/ReactVersion/ProcessLine/ProcessLine.js'
 import BlogMain from './BlogMain.js'
-import BlogList from './BlogList.js'
 
 import { fetchAllTags, fetchAllBlogs, getBlogsByTag, getAllByTag, handleActive } from './actions/fetch.js'
 
@@ -18,7 +17,6 @@ class Blog extends Component {
     this.state = {
       blogNav: "blog-nav",
       top: 60,
-      toggle: props.isBlogToggled,
       isNavToggled: false,
     }
     this.handleTag = this.handleTag.bind(this)
@@ -38,13 +36,10 @@ class Blog extends Component {
   toggleNav(e) {
     e.deltaY >= 0 ? this.setState({  blogNav: "blog-nav-none", top: 0 }) : this.setState({  blogNav: "blog-nav", top: 60 })
   }
+  // 切换blog风格
   handleToggle() {
-    const { isBlogToggled, dispatch } = this.props
-    const { toggle } = this.state
-    dispatch(toggleBlog(!isBlogToggled))
-    this.setState({
-      toggle: !toggle
-    })
+    const { dispatch } = this.props
+    dispatch(toggleBlog())
   }
   handleTag(tagName) {
     const { dispatch, } = this.props
@@ -55,6 +50,7 @@ class Blog extends Component {
     const { dispatch } = this.props
     dispatch(getAllByTag())
   }
+  //移动端toggle导航列表
   toggleNavList() {
     const { isNavToggled } = this.state
     this.setState({
@@ -72,12 +68,11 @@ class Blog extends Component {
       isFetching,
       isAllActive
     } = this.props
-    var toggleStyle = isBlogToggled?{
-          backgroundColor: '#FFF',
-          opacity: .9
+    var toggleStyle = isBlogToggled ? {
+          backgroundColor: 'rgba(255, 255, 255, .6)',
         }:{}
     const blogMainProps = {
-      toggle: this.state.toggle,
+      toggle: isBlogToggled,
       url,
       tags,
       isTag: isTag,
@@ -92,13 +87,12 @@ class Blog extends Component {
       height: 0,
       paddingTop: 0,
     }
-
     return (
       <div className="blog clearfix" onWheel={this.toggleNav.bind(this)}>
         <div className={this.state.blogNav}  style={toggleStyle}>
           <Link to="/">
           <div className="blog-avater">
-            <img src={soFly}/>
+            <img src={soFly} alt="soFly"/>
           </div>
           </Link>
           <Link to="/blog/all"><span className="blog-name">soFly's Blog</span></Link>
